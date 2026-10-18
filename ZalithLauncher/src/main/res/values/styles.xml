@@ -239,10 +239,20 @@
         <item name="thumbTextPadding">0dp</item>
     </style>
 
+    <!-- MD3 slider: tints are cleared so the drawables keep their own colors. -->
     <style name="Widget.Zalith.SeekBar" parent="@android:style/Widget.Material.SeekBar">
-        <item name="android:progressTint">@color/md_primary</item>
-        <item name="android:progressBackgroundTint">@color/md_secondary_container</item>
-        <item name="android:thumbTint">@color/md_primary</item>
+        <item name="android:progressDrawable">@drawable/md_slider_track</item>
+        <item name="android:thumb">@drawable/md_slider_thumb</item>
+        <item name="android:progressTint">@null</item>
+        <item name="android:progressBackgroundTint">@null</item>
+        <item name="android:secondaryProgressTint">@null</item>
+        <item name="android:thumbTint">@null</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:thumbOffset">0dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:maxHeight">36dp</item>
     </style>
 
     <!-- ============================================================ -->

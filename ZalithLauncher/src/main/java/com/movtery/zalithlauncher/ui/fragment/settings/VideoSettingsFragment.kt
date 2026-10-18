@@ -8,12 +8,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import com.movtery.anim.AnimPlayer
 import com.movtery.anim.animations.Animations
 import com.movtery.zalithlauncher.R
 import com.movtery.zalithlauncher.databinding.SettingsFragmentVideoBinding
 import com.movtery.zalithlauncher.event.single.LauncherIgnoreNotchEvent
+import com.movtery.zalithlauncher.feature.performance.PerformancePreset
+import com.movtery.zalithlauncher.feature.performance.PerformancePresets
 import com.movtery.zalithlauncher.feature.log.Logging
 import com.movtery.zalithlauncher.plugins.driver.DriverPluginManager
 import com.movtery.zalithlauncher.plugins.renderer.RendererPluginManager
@@ -235,6 +238,40 @@ class VideoSettingsFragment : AbstractSettingsFragment(R.layout.settings_fragmen
 
         changeResolutionRatioPreview(AllSettings.resolutionRatio.getValue())
         computeVisibility()
+        setupPerformancePresets()
+    }
+
+    private fun setupPerformancePresets() {
+        val context = requireActivity()
+        val buttons = mapOf(
+            PerformancePreset.SAVER to binding.presetSaverButton,
+            PerformancePreset.BALANCED to binding.presetBalancedButton,
+            PerformancePreset.PERFORMANCE to binding.presetPerformanceButton
+        )
+
+        buttons.forEach { (preset, button) ->
+            button.setOnClickListener {
+                PerformancePresets.apply(context, preset)
+                Toast.makeText(context, getString(R.string.preset_applied_fmt, getString(preset.nameRes)), Toast.LENGTH_SHORT).show()
+                // The other settings pages read their values when they are created, so rebuild this one.
+                parentFragmentManager.beginTransaction().detach(this).attach(this).commitAllowingStateLoss()
+            }
+        }
+
+        val active = PerformancePresets.detect(context)
+        buttons.forEach { (preset, button) -> button.isSelected = preset == active }
+
+        binding.presetSummary.text = if (active != null) {
+            val v = PerformancePresets.valuesFor(context, active)
+            getString(R.string.preset_current_fmt, getString(active.nameRes)) + "\n" +
+                    getString(active.descRes, v.resolutionRatio, v.ramMb)
+        } else {
+            getString(R.string.preset_current_fmt, getString(R.string.preset_custom))
+        }
+        binding.presetRecommended.text = getString(
+            R.string.preset_recommended_fmt,
+            getString(PerformancePresets.recommended(context).nameRes)
+        )
     }
 
     private fun changeResolutionRatioPreview(progress: Int) {

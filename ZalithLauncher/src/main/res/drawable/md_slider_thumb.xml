@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  MD3 slider handle: 20dp primary circle inside a constant 36dp box
-  (the box keeps the thumb size / travel identical in every state); a soft halo shows while pressed or focused.
+  MD3 slider handle: a 20dp primary circle inside a constant 36dp box, so the thumb size and
+  travel are identical in every state. A soft halo is shown while pressed or focused.
 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android"
     android:enterFadeDuration="100"

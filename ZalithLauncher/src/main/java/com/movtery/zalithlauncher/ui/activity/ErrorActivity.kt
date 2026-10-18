@@ -4,11 +4,19 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.StyleSpan
+import android.graphics.Typeface
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.movtery.zalithlauncher.InfoCenter
 import com.movtery.zalithlauncher.R
 import com.movtery.zalithlauncher.databinding.ActivityErrorBinding
+import com.movtery.zalithlauncher.feature.crash.CrashAnalyzer
+import com.movtery.zalithlauncher.feature.crash.CrashFixer
+import com.movtery.zalithlauncher.feature.crash.CrashReport
 import com.movtery.zalithlauncher.utils.ZHTools
 import net.kdt.pojavlaunch.Tools
 
@@ -88,6 +96,58 @@ class ErrorActivity : BaseActivity() {
 
             this.topView.setBackgroundColor(ContextCompat.getColor(context, R.color.background_menu_top))
             this.background.setBackgroundColor(ContextCompat.getColor(context, R.color.background_app))
+        }
+
+        runCrashAnalysis(code, extras.getBoolean(BUNDLE_IS_SIGNAL))
+    }
+
+    /** Reads the log off the UI thread, then shows the likely causes and an optional one-tap fix. */
+    private fun runCrashAnalysis(code: Int, isSignal: Boolean) {
+        binding.analysisCard.visibility = View.VISIBLE
+        binding.analysisTitle.setText(R.string.crash_analysis_title)
+        binding.analysisBody.setText(R.string.crash_analysis_running)
+        Thread {
+            val report = runCatching { CrashAnalyzer.analyze(code, isSignal) }.getOrNull()
+            runOnUiThread {
+                if (!isFinishing && !isDestroyed) showAnalysis(report)
+            }
+        }.start()
+    }
+
+    private fun showAnalysis(report: CrashReport?) {
+        if (report == null || (report.diagnoses.isEmpty() && report.rootError == null)) {
+            binding.analysisBody.setText(R.string.crash_analysis_none)
+            return
+        }
+
+        val sb = SpannableStringBuilder()
+        fun appendBold(text: String) {
+            val start = sb.length
+            sb.append(text)
+            sb.setSpan(StyleSpan(Typeface.BOLD), start, sb.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        }
+
+        report.diagnoses.forEachIndexed { index, diagnosis ->
+            if (index > 0) sb.append("\n\n")
+            appendBold(getString(diagnosis.cause.titleRes))
+            sb.append('\n').append(getString(diagnosis.cause.descRes))
+            diagnosis.detail?.let { sb.append('\n').append(getString(R.string.crash_detail_fmt, it)) }
+            sb.append('\n').append(getString(diagnosis.cause.tipRes))
+        }
+        report.rootError?.let {
+            if (sb.isNotEmpty()) sb.append("\n\n")
+            sb.append(getString(R.string.crash_analysis_root, it))
+        }
+        binding.analysisBody.text = sb
+
+        val fixes = report.fixes
+        if (fixes.isNotEmpty()) {
+            binding.fixButton.visibility = View.VISIBLE
+            binding.fixButton.setOnClickListener {
+                binding.fixButton.isEnabled = false
+                val messages = CrashFixer.apply(this, fixes)
+                Toast.makeText(this, messages.joinToString("\n"), Toast.LENGTH_LONG).show()
+            }
         }
     }
 
