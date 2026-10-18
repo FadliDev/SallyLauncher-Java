@@ -4,6 +4,7 @@
 local.properties
 .idea/
 .vscode/
+/curseforge_key.txt
 /ZalithLauncher/.cxx/
 /ZalithLauncher/src/main/assets/components/lwjgl3/
 /ZalithLauncher/release/
