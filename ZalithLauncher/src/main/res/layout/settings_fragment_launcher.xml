@@ -16,6 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_card"
+            android:divider="@drawable/divider_setting"
+            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -30,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/checkLibraries_title"
@@ -64,6 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/verifyManifest_title"
@@ -98,6 +102,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/resourceImageCache_title"
@@ -131,6 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/addFullResourceName_title"
@@ -165,6 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/downloadSource_title"
@@ -190,13 +197,15 @@
                     android:layout_below="@+id/downloadSource_summary"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:text="@string/generic_default" />
+                    android:text="@string/generic_default"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/maxDownloadThreads_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp">
                 <TextView
                     android:id="@+id/maxDownloadThreads_title"
                     android:layout_width="wrap_content"
@@ -236,7 +245,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0" />
+                    tools:text="0"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -245,6 +255,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
             android:background="@drawable/background_card"
+            android:divider="@drawable/divider_setting"
+            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -259,6 +271,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/launcherTheme_title"
@@ -275,13 +288,15 @@
                     android:layout_below="@+id/launcherTheme_title"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
-                    android:text="@string/generic_default" />
+                    android:text="@string/generic_default"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/custom_background_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/custom_background_title"
@@ -306,6 +321,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/animation_title"
@@ -339,7 +355,8 @@
                 android:id="@+id/animationSpeed_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp">
                 <TextView
                     android:id="@+id/animationSpeed_title"
                     android:layout_width="wrap_content"
@@ -379,13 +396,15 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0" />
+                    tools:text="0"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/pageOpacity_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp">
                 <TextView
                     android:id="@+id/pageOpacity_title"
                     android:layout_width="wrap_content"
@@ -425,7 +444,8 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0" />
+                    tools:text="0"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -434,6 +454,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
             android:background="@drawable/background_card"
+            android:divider="@drawable/divider_setting"
+            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -448,6 +470,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/enableLogOutput_title"
@@ -481,6 +504,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/quitLauncher_title"
@@ -515,6 +539,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/clean_up_cache_title"
@@ -539,6 +564,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/check_update_title"
@@ -563,6 +589,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/acceptPreReleaseUpdates_title"
@@ -597,6 +624,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/notification_permission_request_title"

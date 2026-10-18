@@ -10,10 +10,12 @@
     android:background="@color/md_surface">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/settings_layout"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <View
@@ -26,11 +28,12 @@
             app:layout_constraintTop_toTopOf="parent" />
         <com.angcyo.tablayout.DslTabLayout
             android:id="@+id/settings_tab"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="@dimen/_48sdp"
             android:background="@drawable/background_panel"
             android:paddingHorizontal="@dimen/_6sdp"
             android:paddingVertical="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tab_deselect_color="@color/md_on_surface_variant"
@@ -41,7 +44,7 @@
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_16sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
                 <ImageView
                     android:id="@+id/video_image"
                     android:layout_width="@dimen/_22sdp"
@@ -64,7 +67,7 @@
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_16sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
                 <ImageView
                     android:id="@+id/controls_image"
                     android:layout_width="@dimen/_22sdp"
@@ -87,7 +90,7 @@
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_16sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
                 <ImageView
                     android:id="@+id/game_image"
                     android:layout_width="@dimen/_22sdp"
@@ -110,7 +113,7 @@
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_16sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
                 <ImageView
                     android:id="@+id/launcher_image"
                     android:layout_width="@dimen/_22sdp"
@@ -133,7 +136,7 @@
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_16sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
                 <ImageView
                     android:id="@+id/experimental_image"
                     android:layout_width="@dimen/_22sdp"
@@ -159,7 +162,7 @@
         android:id="@+id/settings_viewpager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_8sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

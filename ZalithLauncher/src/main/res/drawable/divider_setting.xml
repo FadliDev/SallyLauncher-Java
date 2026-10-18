@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hairline divider between settings rows, inset so it lines up with the row text -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="14dp"
+    android:insetRight="14dp">
+    <shape android:shape="rectangle">
+        <size android:height="1dp" />
+        <solid android:color="@color/md_outline_variant" />
+    </shape>
+</inset>

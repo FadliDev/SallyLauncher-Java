@@ -16,6 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_card"
+            android:divider="@drawable/divider_setting"
+            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -30,6 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/renderer_title"
@@ -48,7 +51,8 @@
                     android:layout_below="@+id/renderer_title"
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/renderer_download"
-                    android:text="@string/generic_default" />
+                    android:text="@string/generic_default"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
                 <ImageButton
                     android:id="@+id/renderer_download"
                     android:layout_width="@dimen/_32sdp"
@@ -64,6 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/renderer_local_import_title"
@@ -99,6 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/driver_title"
@@ -117,7 +123,8 @@
                     android:layout_below="@+id/driver_title"
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/driver_download"
-                    android:text="@string/generic_default" />
+                    android:text="@string/generic_default"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
                 <ImageButton
                     android:id="@+id/driver_download"
                     android:layout_width="@dimen/_32sdp"
@@ -133,6 +140,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/ignoreNotch_title"
@@ -167,6 +175,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/ignoreNotchLauncher_title"
@@ -200,7 +209,8 @@
                 android:id="@+id/resolutionRatio_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp">
                 <TextView
                     android:id="@+id/resolutionRatio_title"
                     android:layout_width="wrap_content"
@@ -241,7 +251,8 @@
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:background="@drawable/background_text"
-                    tools:text="0 x 0" />
+                    tools:text="0 x 0"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
                 <TextView
                     android:id="@+id/resolutionRatio_value"
                     android:layout_width="wrap_content"
@@ -251,13 +262,15 @@
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
                     android:background="@drawable/background_text"
-                    tools:text="0" />
+                    tools:text="0"
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/sustainedPerformance_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/sustainedPerformance_title"
@@ -291,6 +304,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/alternate_surface_title"
@@ -324,6 +338,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/force_vsync_title"
@@ -357,6 +372,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/vsync_in_zink_title"
@@ -390,6 +406,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
+                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/zinkPreferSystemDriver_title"
