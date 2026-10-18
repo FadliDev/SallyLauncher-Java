@@ -4,7 +4,7 @@
         <inset android:inset="2dp">
             <shape android:shape="oval">
                 <solid android:color="@color/md_on_primary" />
-                <size android:width="28dp" android:height="28dp" />
+                <size android:width="24dp" android:height="24dp" />
             </shape>
         </inset>
     </item>
