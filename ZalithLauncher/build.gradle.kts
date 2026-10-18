@@ -69,7 +69,7 @@ android {
         versionCode = launcherVersionCode
         versionName = launcherVersionName
         multiDexEnabled = true //important
-        ndk { abiFilters += listOf("arm64-v8a") }
+        // ABI selection is handled by splits. Do not combine with ndk abiFilters.
         manifestPlaceholders["launcher_name"] = launcherAPPName
     }
 
