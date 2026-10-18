@@ -47,7 +47,7 @@
                     android:minHeight="@dimen/_64sdp"
                     android:paddingHorizontal="@dimen/_14sdp"
                     android:paddingVertical="@dimen/_10sdp"
-                    app:layout_flexBasisPercent="46%"
+                    app:layout_flexBasisPercent="100%"
                     app:layout_flexGrow="1">
                     <ImageView
                         android:id="@+id/about_icon"
@@ -81,7 +81,7 @@
                     android:minHeight="@dimen/_64sdp"
                     android:paddingHorizontal="@dimen/_14sdp"
                     android:paddingVertical="@dimen/_10sdp"
-                    app:layout_flexBasisPercent="46%"
+                    app:layout_flexBasisPercent="100%"
                     app:layout_flexGrow="1">
                     <ImageView
                         android:id="@+id/custom_control_icon"
@@ -115,7 +115,7 @@
                     android:minHeight="@dimen/_64sdp"
                     android:paddingHorizontal="@dimen/_14sdp"
                     android:paddingVertical="@dimen/_10sdp"
-                    app:layout_flexBasisPercent="46%"
+                    app:layout_flexBasisPercent="100%"
                     app:layout_flexGrow="1">
                     <ImageView
                         android:id="@+id/open_main_dir_icon"
@@ -149,7 +149,7 @@
                     android:minHeight="@dimen/_64sdp"
                     android:paddingHorizontal="@dimen/_14sdp"
                     android:paddingVertical="@dimen/_10sdp"
-                    app:layout_flexBasisPercent="46%"
+                    app:layout_flexBasisPercent="100%"
                     app:layout_flexGrow="1">
                     <ImageView
                         android:id="@+id/install_jar_icon"
@@ -184,7 +184,7 @@
                     android:minHeight="@dimen/_64sdp"
                     android:paddingHorizontal="@dimen/_14sdp"
                     android:paddingVertical="@dimen/_10sdp"
-                    app:layout_flexBasisPercent="46%"
+                    app:layout_flexBasisPercent="100%"
                     app:layout_flexGrow="1">
                     <ImageView
                         android:id="@+id/share_logs_icon"
