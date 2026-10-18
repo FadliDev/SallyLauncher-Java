@@ -620,16 +620,12 @@ public class LauncherActivity extends BaseActivity {
         binding.appTitleText.setTextColor(ContextCompat.getColor(this, R.color.md_on_surface));
         ColorStateList colorStateList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.md_on_surface_variant));
         binding.downloadButton.setImageTintList(colorStateList);
-        binding.settingButton.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.md_on_secondary_container)));
+        binding.settingButton.setImageTintList(colorStateList);
     }
 
-    /** Navigation rail background: keeps the rounded inner edge whatever color is used. */
+    /** Top bar background (flat, no rounded corners). */
     private void setRailColor(int color) {
-        float r = 28f * getResources().getDisplayMetrics().density;
-        GradientDrawable gd = new GradientDrawable();
-        gd.setColor(color);
-        gd.setCornerRadii(new float[]{r, r, 0, 0, 0, 0, r, r});
-        binding.topLayout.setBackground(gd);
+        binding.topLayout.setBackgroundColor(color);
     }
 
     @SuppressWarnings("SameParameterValue")
