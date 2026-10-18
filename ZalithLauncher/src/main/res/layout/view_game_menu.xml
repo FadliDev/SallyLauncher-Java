@@ -26,13 +26,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@color/black_or_white"
-                android:text="@string/option_category_debug" />
+                android:text="@string/option_category_debug"
+                android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
-                android:background="@color/text_background_fill" />
+                android:background="@color/md_outline_variant" />
             <com.movtery.zalithlauncher.ui.view.AnimTextView
                 android:id="@+id/force_close"
                 android:layout_width="match_parent"
@@ -70,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:background="@color/text_background_fill" />
+                android:background="@color/md_outline_variant" />
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/open_memory_info_layout"
                 android:layout_width="match_parent"
@@ -88,7 +87,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/open_memory_info"
                     android:text="@string/setting_game_menu_show_memory_title"
-                    android:textColor="@color/black_or_white" />
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
                 <Switch
                     android:id="@+id/open_memory_info"
                     android:layout_width="wrap_content"
@@ -114,7 +113,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/open_fps_info"
                     android:text="@string/setting_game_menu_show_fps_title"
-                    android:textColor="@color/black_or_white" />
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
                 <Switch
                     android:id="@+id/open_fps_info"
                     android:layout_width="wrap_content"
@@ -201,13 +200,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:textStyle="bold"
-                android:textColor="@color/black_or_white"
-                android:text="@string/option_category_control" />
+                android:text="@string/option_category_control"
+                android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
-                android:background="@color/text_background_fill" />
+                android:background="@color/md_outline_variant" />
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/disableGestures_layout"
                 android:layout_width="match_parent"
@@ -225,7 +223,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/disableGestures"
                     android:text="@string/setting_disable_gestures_title"
-                    android:textColor="@color/black_or_white" />
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
                 <Switch
                     android:id="@+id/disableGestures"
                     android:layout_width="wrap_content"
@@ -251,7 +249,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/disableDoubleTap"
                     android:text="@string/setting_disable_swap_hand_title"
-                    android:textColor="@color/black_or_white" />
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
                 <Switch
                     android:id="@+id/disableDoubleTap"
                     android:layout_width="wrap_content"
@@ -417,14 +415,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:textStyle="bold"
-                android:textColor="@color/black_or_white"
-                android:text="@string/setting_category_gyro_controls" />
+                android:text="@string/setting_category_gyro_controls"
+                android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
-                android:textStyle="bold"
-                android:background="@color/text_background_fill" />
+                android:background="@color/md_outline_variant"
+                android:fontFamily="sans-serif-medium"/>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/enableGyro_layout"
                 android:layout_width="match_parent"
@@ -442,7 +439,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/enableGyro"
                     android:text="@string/setting_enable_gyro_title"
-                    android:textColor="@color/black_or_white" />
+                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
                 <Switch
                     android:id="@+id/enableGyro"
                     android:layout_width="wrap_content"
@@ -533,7 +530,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/gyroInvertX"
                         android:text="@string/setting_gyro_invert_x_axis"
-                        android:textColor="@color/black_or_white" />
+                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
                     <Switch
                         android:id="@+id/gyroInvertX"
                         android:layout_width="wrap_content"
@@ -559,7 +556,7 @@
                         android:layout_marginEnd="@dimen/_8sdp"
                         android:layout_toStartOf="@+id/gyroInvertY"
                         android:text="@string/setting_gyro_invert_y_axis"
-                        android:textColor="@color/black_or_white" />
+                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
                     <Switch
                         android:id="@+id/gyroInvertY"
                         android:layout_width="wrap_content"
@@ -573,14 +570,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:textStyle="bold"
-                android:textColor="@color/black_or_white"
-                android:text="@string/option_category_hotbar" />
+                android:text="@string/option_category_hotbar"
+                android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
-                android:textStyle="bold"
-                android:background="@color/text_background_fill" />
+                android:background="@color/md_outline_variant"
+                android:fontFamily="sans-serif-medium"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -593,7 +589,7 @@
                 android:background="@drawable/background_item"
                 android:paddingVertical="@dimen/_12sdp"
                 android:paddingHorizontal="@dimen/padding_heavy"
-                app:spinner_arrow_tint="@color/primary_text"
+                app:spinner_arrow_tint="@color/md_on_surface"
                 app:spinner_item_height="@dimen/_40sdp"
                 app:spinner_popup_max_height="@dimen/_240sdp"
                 app:spinner_popup_background="@drawable/md_menu_background" />

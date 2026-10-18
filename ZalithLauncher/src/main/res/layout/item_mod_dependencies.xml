@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginHorizontal="@dimen/_8sdp"
-        android:textColor="@color/primary_text"
+        android:textColor="@color/md_on_surface"
         android:textSize="@dimen/_12ssp"
         android:singleLine="true"
         tools:text="Mod Title"

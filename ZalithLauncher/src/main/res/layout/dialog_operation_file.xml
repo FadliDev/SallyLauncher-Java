@@ -15,7 +15,7 @@
         android:layout_height="@dimen/_18sdp"
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_16sdp"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:background="@drawable/md_icon_button"
         android:src="@drawable/ic_close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +33,7 @@
             android:layout_marginTop="@dimen/_8sdp"
             android:singleLine="true"
             android:text="@string/file_tips"
-            android:textColor="@color/black_or_white"
+            android:textColor="@color/md_on_surface"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -58,7 +58,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="@dimen/_8sdp"
                     android:gravity="start"
-                    android:textColor="@color/black_or_white"
+                    android:textColor="@color/md_on_surface"
                     android:textAppearance="@style/TextAppearance.Zalith.BodyMedium" />
             </LinearLayout>
         </ScrollView>
@@ -94,7 +94,7 @@
                 android:layout_toEndOf="@+id/copy_image"
                 android:singleLine="true"
                 android:text="@android:string/copy"
-                android:textColor="@color/black_or_white"
+                android:textColor="@color/md_on_surface"
                 android:textSize="@dimen/_14ssp" />
         </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
@@ -120,7 +120,7 @@
                 android:layout_toEndOf="@+id/rename_image"
                 android:singleLine="true"
                 android:text="@string/generic_rename"
-                android:textColor="@color/black_or_white"
+                android:textColor="@color/md_on_surface"
                 android:textSize="@dimen/_14ssp" />
         </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
@@ -144,7 +144,7 @@
                 android:layout_toEndOf="@+id/share_image"
                 android:singleLine="true"
                 android:text="@string/generic_share"
-                android:textColor="@color/black_or_white"
+                android:textColor="@color/md_on_surface"
                 android:textSize="@dimen/_14ssp" />
         </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
     </LinearLayout>
@@ -179,7 +179,7 @@
                 android:layout_toEndOf="@+id/move_image"
                 android:singleLine="true"
                 android:text="@string/generic_move"
-                android:textColor="@color/black_or_white"
+                android:textColor="@color/md_on_surface"
                 android:textSize="@dimen/_14ssp" />
         </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
@@ -203,7 +203,7 @@
                 android:layout_toEndOf="@+id/delete_image"
                 android:singleLine="true"
                 android:text="@string/generic_delete"
-                android:textColor="@color/black_or_white"
+                android:textColor="@color/md_on_surface"
                 android:textSize="@dimen/_14ssp" />
         </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
@@ -228,7 +228,7 @@
                 android:layout_toEndOf="@+id/more_image"
                 android:singleLine="true"
                 android:text="@string/generic_more"
-                android:textColor="@color/black_or_white"
+                android:textColor="@color/md_on_surface"
                 android:textSize="@dimen/_14ssp" />
         </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
     </LinearLayout>

@@ -40,7 +40,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:tabGravity="fill"
-                app:tabIndicatorColor="@color/menu_progress"
+                app:tabIndicatorColor="@color/md_primary"
                 app:tabIndicatorHeight="@dimen/_3sdp"
                 app:tabMode="fixed" />
             <com.movtery.zalithlauncher.ui.subassembly.filelist.FileRecyclerView
@@ -89,7 +89,7 @@
             android:id="@+id/operate_main_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@color/menu_overlay"
+            android:background="@color/md_surface_container_low"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

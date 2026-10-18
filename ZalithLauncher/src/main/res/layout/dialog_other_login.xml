@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:singleLine="true"
         android:textSize="@dimen/_14ssp"
-        android:textStyle="bold" />
+        android:fontFamily="sans-serif-medium"/>
     <TextView
         android:id="@+id/email_text"
         android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
         android:layout_marginHorizontal="@dimen/_8sdp"
         android:background="?attr/selectableItemBackground"
         android:text="@string/other_login_registry_now"
-        android:textColor="@android:color/holo_green_dark" />
+        android:textColor="@color/md_primary" />
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -56,14 +56,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/controls_info_name"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                     <TextView
                         android:id="@+id/name_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_weight="1"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -73,14 +73,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/controls_info_file_name"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                     <TextView
                         android:id="@+id/file_name_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_weight="1"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -90,14 +90,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/controls_info_author"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                     <TextView
                         android:id="@+id/author_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_weight="1"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -107,14 +107,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/controls_info_version"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                     <TextView
                         android:id="@+id/version_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_weight="1"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
@@ -124,14 +124,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/controls_info_desc"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                     <TextView
                         android:id="@+id/desc_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_weight="1"
-                        android:textStyle="bold" />
+                        android:fontFamily="sans-serif-medium"/>
                 </TableRow>
             </TableLayout>
             <com.movtery.zalithlauncher.ui.view.AnimButton

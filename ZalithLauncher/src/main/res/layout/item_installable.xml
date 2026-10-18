@@ -24,8 +24,8 @@
             android:singleLine="true"
             android:text="File Name"
             android:textSize="@dimen/_12sdp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            android:fontFamily="sans-serif-medium"/>
         <TextView
             android:id="@+id/summary"
             android:layout_width="match_parent"

@@ -47,7 +47,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@id/install_icon"
                     android:layout_marginHorizontal="@dimen/_8sdp"
-                    android:textColor="@color/primary_text"
+                    android:textColor="@color/md_on_surface"
                     android:text="@string/version_install_new" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -67,8 +67,8 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/favorites_actions"
-                    app:tab_deselect_color="@color/black_or_white"
-                    app:tab_select_color="@color/black_or_white"
+                    app:tab_deselect_color="@color/md_on_surface"
+                    app:tab_select_color="@color/md_on_surface"
                     app:tab_indicator_enable_flow="true"
                     app:tab_indicator_drawable="@drawable/selector_bar_horizontal"
                     app:tab_indicator_y_offset="@dimen/_4sdp">
@@ -84,7 +84,7 @@
                             android:paddingHorizontal="@dimen/_8sdp"
                             android:maxLines="2"
                             android:text="@string/generic_all"
-                            android:textColor="@color/black_or_white" />
+                            android:textColor="@color/md_on_surface" />
                     </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
                 </com.angcyo.tablayout.DslTabLayout>
                 <ImageView
@@ -95,7 +95,7 @@
                     android:scaleType="centerCrop"
                     android:scaleX="0.92"
                     android:scaleY="0.92"
-                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:background="@drawable/md_icon_button"
                     android:src="@drawable/ic_more"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -122,7 +122,7 @@
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="@string/version_manager_title"
-                android:textColor="@color/primary_text"
+                android:textColor="@color/md_on_surface"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <androidx.recyclerview.widget.RecyclerView
@@ -167,7 +167,7 @@
             android:id="@+id/operate_main_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@color/menu_overlay"
+            android:background="@color/md_surface_container_low"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -179,7 +179,7 @@
                 android:layout_marginStart="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="@string/profiles_path_title"
-                android:textColor="@color/primary_text"
+                android:textColor="@color/md_on_surface"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
             <androidx.recyclerview.widget.RecyclerView

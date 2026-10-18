@@ -22,7 +22,7 @@
             android:layout_marginEnd="@dimen/_minus4sdp"
             android:clipToPadding="false"
             android:paddingHorizontal="@dimen/_8sdp"
-            android:scrollbarThumbVertical="@color/background_menu_element"
+            android:scrollbarThumbVertical="@color/md_primary"
             android:scrollbars="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +106,7 @@
             android:id="@+id/operate_main_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@color/background_app"
+            android:background="@color/md_surface"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/shadowView"
@@ -206,7 +206,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/platform_textview"
-                            app:spinner_arrow_tint="@color/primary_text"
+                            app:spinner_arrow_tint="@color/md_on_surface"
                             app:spinner_popup_background="@drawable/md_menu_background"
                             app:spinner_popup_height="@dimen/_80sdp"
                             tools:paddingVertical="@dimen/_12sdp" />
@@ -232,7 +232,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/sort_textview"
-                            app:spinner_arrow_tint="@color/primary_text"
+                            app:spinner_arrow_tint="@color/md_on_surface"
                             app:spinner_popup_background="@drawable/md_menu_background"
                             app:spinner_popup_height="@dimen/_200sdp"
                             tools:paddingVertical="@dimen/_12sdp" />
@@ -258,7 +258,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/category_textview"
-                            app:spinner_arrow_tint="@color/primary_text"
+                            app:spinner_arrow_tint="@color/md_on_surface"
                             app:spinner_popup_background="@drawable/md_menu_background"
                             app:spinner_popup_height="@dimen/_200sdp"
                             tools:paddingVertical="@dimen/_12sdp" />
@@ -284,7 +284,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/modloader_textview"
-                            app:spinner_arrow_tint="@color/primary_text"
+                            app:spinner_arrow_tint="@color/md_on_surface"
                             app:spinner_popup_background="@drawable/md_menu_background"
                             app:spinner_popup_height="@dimen/_200sdp"
                             tools:paddingVertical="@dimen/_12sdp" />

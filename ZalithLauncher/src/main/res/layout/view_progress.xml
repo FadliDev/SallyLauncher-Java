@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/menu_overlay">
+    android:background="@color/md_surface_container_low">
     <ProgressBar
         android:id="@+id/progress_generic_progressbar"
         android:layout_width="@dimen/_40sdp"
@@ -18,7 +18,7 @@
         android:layout_height="0dp"
         android:gravity="center"
         android:paddingEnd="@dimen/_40sdp"
-        android:textColor="@color/primary_text"
+        android:textColor="@color/md_on_surface"
         android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/progress_flip_arrow"

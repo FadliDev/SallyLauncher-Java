@@ -38,8 +38,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/add_server"
-                app:tab_deselect_color="@color/black_or_white"
-                app:tab_select_color="@color/black_or_white">
+                app:tab_deselect_color="@color/md_on_surface"
+                app:tab_select_color="@color/md_on_surface">
                 <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/add_microsoft_account"
                     android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
                 android:scaleType="centerCrop"
                 android:scaleX="0.92"
                 android:scaleY="0.92"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:background="@drawable/md_icon_button"
                 android:src="@drawable/ic_more"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -130,7 +130,7 @@
             android:id="@+id/operation_main_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@color/menu_overlay"
+            android:background="@color/md_surface_container_low"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

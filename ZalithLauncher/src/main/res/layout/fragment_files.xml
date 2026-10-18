@@ -64,7 +64,7 @@
                     android:layout_marginStart="@dimen/_8sdp"
                     android:layout_marginTop="@dimen/_8sdp"
                     android:text="."
-                    android:textColor="@color/primary_text"
+                    android:textColor="@color/md_on_surface"
                     android:background="?android:attr/selectableItemBackground"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/select_all"
@@ -103,7 +103,7 @@
             android:id="@+id/operate_main_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@color/menu_overlay"
+            android:background="@color/md_surface_container_low"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,7 +137,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_toEndOf="@+id/imageView"
-                        android:textColor="@color/black_or_white"
+                        android:textColor="@color/md_on_surface"
                         android:text="@string/file_external_storage" />
                 </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
                 <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
@@ -164,7 +164,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="@dimen/_12sdp"
                         android:layout_toEndOf="@+id/imageView1"
-                        android:textColor="@color/black_or_white"
+                        android:textColor="@color/md_on_surface"
                         android:text="@string/file_software_private" />
                 </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
                 <com.movtery.zalithlauncher.ui.view.AnimCheckBox

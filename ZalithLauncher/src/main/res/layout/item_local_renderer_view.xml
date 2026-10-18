@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:textSize="@dimen/_11sdp"
-            android:textColor="@color/primary_text" />
+            android:textColor="@color/md_on_surface" />
         <TextView
             android:id="@+id/renderer_id"
             android:layout_width="match_parent"

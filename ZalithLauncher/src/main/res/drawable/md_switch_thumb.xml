@@ -1,19 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="true">
-        <inset android:inset="2dp">
-            <shape android:shape="oval">
-                <solid android:color="@color/md_on_primary" />
-                <size android:width="24dp" android:height="24dp" />
-            </shape>
-        </inset>
+<!--
+  MD3 switch thumb.
+  Every state is drawn inside the SAME fixed 28dp box (transparent base layer) so the
+  Switch always computes one constant thumb size/travel. (The previous version used
+  <inset>, whose padding differs per state -> thumb jumped / was misaligned.)
+  selected 24dp | unselected 16dp | pressed 28dp
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="100"
+    android:exitFadeDuration="100">
+
+    <!-- disabled + selected -->
+    <item android:state_enabled="false" android:state_checked="true">
+        <layer-list>
+            <item android:width="28dp" android:height="28dp">
+                <shape android:shape="rectangle"><solid android:color="@android:color/transparent" /><size android:width="28dp" android:height="28dp" /></shape>
+            </item>
+            <item android:width="24dp" android:height="24dp" android:gravity="center">
+                <shape android:shape="oval"><solid android:color="@color/md_surface" /></shape>
+            </item>
+        </layer-list>
     </item>
+
+    <!-- disabled + unselected -->
+    <item android:state_enabled="false">
+        <layer-list>
+            <item android:width="28dp" android:height="28dp">
+                <shape android:shape="rectangle"><solid android:color="@android:color/transparent" /><size android:width="28dp" android:height="28dp" /></shape>
+            </item>
+            <item android:width="16dp" android:height="16dp" android:gravity="center">
+                <shape android:shape="oval"><solid android:color="@color/md_disabled_content" /></shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- pressed + selected -->
+    <item android:state_pressed="true" android:state_checked="true">
+        <layer-list>
+            <item android:width="28dp" android:height="28dp">
+                <shape android:shape="oval"><solid android:color="@color/md_primary_container" /><size android:width="28dp" android:height="28dp" /></shape>
+            </item>
+            <item android:width="16dp" android:height="16dp" android:gravity="center" android:drawable="@drawable/md_switch_check" />
+        </layer-list>
+    </item>
+
+    <!-- pressed + unselected -->
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:width="28dp" android:height="28dp">
+                <shape android:shape="oval"><solid android:color="@color/md_on_surface_variant" /><size android:width="28dp" android:height="28dp" /></shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- selected -->
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:width="28dp" android:height="28dp">
+                <shape android:shape="rectangle"><solid android:color="@android:color/transparent" /><size android:width="28dp" android:height="28dp" /></shape>
+            </item>
+            <item android:width="24dp" android:height="24dp" android:gravity="center">
+                <shape android:shape="oval"><solid android:color="@color/md_on_primary" /></shape>
+            </item>
+            <item android:width="16dp" android:height="16dp" android:gravity="center" android:drawable="@drawable/md_switch_check" />
+        </layer-list>
+    </item>
+
+    <!-- unselected (default) -->
     <item>
-        <inset android:inset="6dp">
-            <shape android:shape="oval">
-                <solid android:color="@color/md_outline" />
-                <size android:width="16dp" android:height="16dp" />
-            </shape>
-        </inset>
+        <layer-list>
+            <item android:width="28dp" android:height="28dp">
+                <shape android:shape="rectangle"><solid android:color="@android:color/transparent" /><size android:width="28dp" android:height="28dp" /></shape>
+            </item>
+            <item android:width="16dp" android:height="16dp" android:gravity="center">
+                <shape android:shape="oval"><solid android:color="@color/md_outline" /></shape>
+            </item>
+        </layer-list>
     </item>
 </selector>

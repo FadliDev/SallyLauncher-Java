@@ -9,7 +9,7 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="100dp" />
-            <solid android:color="@color/button_background" />
+            <solid android:color="@color/md_secondary_container" />
         </shape>
     </item>
 </selector>

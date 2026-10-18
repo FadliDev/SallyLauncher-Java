@@ -215,6 +215,41 @@
     </style>
 
     <!-- ============================================================ -->
+    <!--  Shared list / settings typography (MD3)                     -->
+    <!-- ============================================================ -->
+    <!-- list item headline (settings row title) -->
+    <style name="TextAppearance.Zalith.SettingTitle" parent="">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/md_on_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <!-- list item supporting text -->
+    <style name="TextAppearance.Zalith.SettingSummary" parent="">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/md_on_surface_variant</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <!-- section / category header (label large, primary) -->
+    <style name="TextAppearance.Zalith.SectionHeader" parent="">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/md_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+    <!-- navigation drawer label -->
+    <style name="TextAppearance.Zalith.NavLabel" parent="">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/md_on_surface_variant</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <!-- screen / dialog title -->
+    <style name="TextAppearance.Zalith.TitleLarge" parent="">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/md_on_surface</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- ============================================================ -->
     <!--  Switch (MD3: 52x32 track, state-dependent thumb)            -->
     <!-- ============================================================ -->
     <style name="Widget.Zalith.Switch" parent="@android:style/Widget.Material.CompoundButton.Switch">
@@ -226,6 +261,11 @@
         <item name="android:splitTrack">false</item>
         <item name="android:switchMinWidth">52dp</item>
         <item name="android:thumbTextPadding">0dp</item>
+        <item name="android:switchPadding">@dimen/_12sdp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:textColor">@color/md_on_surface</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:background">@null</item>
     </style>
 
     <style name="Widget.Zalith.SwitchCompat" parent="@style/Widget.AppCompat.CompoundButton.Switch">
@@ -237,6 +277,10 @@
         <item name="splitTrack">false</item>
         <item name="switchMinWidth">52dp</item>
         <item name="thumbTextPadding">0dp</item>
+        <item name="switchPadding">@dimen/_12sdp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:textColor">@color/md_on_surface</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
     </style>
 
     <style name="Widget.Zalith.SeekBar" parent="@android:style/Widget.Material.SeekBar">
