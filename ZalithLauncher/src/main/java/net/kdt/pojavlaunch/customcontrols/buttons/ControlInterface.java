@@ -4,7 +4,10 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.InsetDrawable;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +15,10 @@ import android.widget.FrameLayout;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.core.math.MathUtils;
 
+import com.movtery.zalithlauncher.R;
 import com.movtery.zalithlauncher.feature.log.Logging;
 import com.movtery.zalithlauncher.setting.AllSettings;
 
@@ -112,14 +117,40 @@ public interface ControlInterface extends View.OnLongClickListener, GrabListener
      * Apply the background according to properties
      */
     default void setBackground() {
-        GradientDrawable gd = getControlView().getBackground() instanceof GradientDrawable
-                ? (GradientDrawable) getControlView().getBackground()
-                : new GradientDrawable();
-        gd.setColor(getProperties().bgColor);
-        gd.setStroke((int) Tools.dpToPx(getProperties().strokeWidth * (getControlLayoutParent().getLayoutScale()/100f)), getProperties().strokeColor);
-        gd.setCornerRadius(computeCornerRadius(getProperties().cornerRadius));
+        final int LEGACY_DEFAULT_BG = 0x4D000000; // the flat black that old layouts (default.json) use
+        View view = getControlView();
+        Context ctx = view.getContext();
+        float density = ctx.getResources().getDisplayMetrics().density;
 
-        getControlView().setBackground(gd);
+        // Sally style: every button is inset by 3dp so neighbours never touch, and rounded.
+        GradientDrawable gd;
+        Drawable current = view.getBackground();
+        if (current instanceof InsetDrawable && ((InsetDrawable) current).getDrawable() instanceof GradientDrawable) {
+            gd = (GradientDrawable) ((InsetDrawable) current).getDrawable();
+        } else {
+            gd = new GradientDrawable();
+            view.setBackground(new InsetDrawable(gd, Math.max(1, Math.round(3 * density))));
+        }
+
+        ControlData props = getProperties();
+        int bgColor = props.bgColor;
+        int strokeColor = props.strokeColor;
+        int strokePx = (int) Tools.dpToPx(props.strokeWidth * (getControlLayoutParent().getLayoutScale() / 100f));
+        float radius = computeCornerRadius(props.cornerRadius);
+
+        // Layouts still using the untouched legacy look get the Sally look; custom colors are respected as-is.
+        if (bgColor == LEGACY_DEFAULT_BG && props.strokeWidth == 0) {
+            bgColor = ContextCompat.getColor(ctx, R.color.md_control_surface);
+            strokeColor = ContextCompat.getColor(ctx, R.color.md_control_stroke);
+            strokePx = Math.max(1, Math.round(1.2f * density));
+            if (props.cornerRadius == 0) {
+                radius = Math.min(props.getWidth(), props.getHeight()) * 0.24f;
+            }
+        }
+
+        gd.setColor(bgColor);
+        gd.setStroke(strokePx, strokeColor);
+        gd.setCornerRadius(radius);
     }
 
     /**

@@ -73,4 +73,8 @@
     <color name="md_disabled_container">#1F1C1B20</color>
     <color name="md_disabled_content">#611C1B20</color>
     <color name="md_scrim">#52000000</color>
+
+    <!-- In-game touch controls (same in light/dark: they sit on top of the game image) -->
+    <color name="md_control_surface">#9929252F</color>
+    <color name="md_control_stroke">#66FFFFFF</color>
 </resources>

@@ -1,4 +1,0 @@
-# append these lines to your repo .gitignore
-feathergl/3rdparty/glslang/
-feathergl/3rdparty/SPIRV-Cross/
-feathergl/build/

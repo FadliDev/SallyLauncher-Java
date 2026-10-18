@@ -8,6 +8,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
@@ -597,7 +598,7 @@ public class LauncherActivity extends BaseActivity {
                 Palette palette = Palette.from(bitmap).generate();
 
                 boolean isDarkMode = ZHTools.isDarkMode(this);
-                binding.topLayout.setBackgroundColor(
+                setRailColor(
                         isDarkMode ?
                                 palette.getDarkVibrantColor(backgroundMenuTop) :
                                 palette.getLightVibrantColor(backgroundMenuTop)
@@ -615,11 +616,20 @@ public class LauncherActivity extends BaseActivity {
                 return;
             }
         }
-        binding.topLayout.setBackgroundColor(backgroundMenuTop);
-        binding.appTitleText.setTextColor(ContextCompat.getColor(this, R.color.menu_bar_text));
-        ColorStateList colorStateList = ColorStateList.valueOf(0xFFFFFFFF);
+        setRailColor(ContextCompat.getColor(this, R.color.md_surface_container));
+        binding.appTitleText.setTextColor(ContextCompat.getColor(this, R.color.md_on_surface));
+        ColorStateList colorStateList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.md_on_surface_variant));
         binding.downloadButton.setImageTintList(colorStateList);
-        binding.settingButton.setImageTintList(colorStateList);
+        binding.settingButton.setImageTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.md_on_secondary_container)));
+    }
+
+    /** Navigation rail background: keeps the rounded inner edge whatever color is used. */
+    private void setRailColor(int color) {
+        float r = 28f * getResources().getDisplayMetrics().density;
+        GradientDrawable gd = new GradientDrawable();
+        gd.setColor(color);
+        gd.setCornerRadii(new float[]{0, 0, r, r, r, r, 0, 0});
+        binding.topLayout.setBackground(gd);
     }
 
     @SuppressWarnings("SameParameterValue")

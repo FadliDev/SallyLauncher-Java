@@ -4,16 +4,16 @@
     <item>
         <selector>
             <item android:state_enabled="false">
-                <shape android:shape="rectangle"><corners android:radius="100dp" /><solid android:color="@color/md_disabled_container" /></shape>
+                <shape android:shape="rectangle"><corners android:radius="14dp" /><solid android:color="@color/md_disabled_container" /></shape>
             </item>
             <item>
-                <shape android:shape="rectangle"><corners android:radius="100dp" /><solid android:color="@color/md_primary" /></shape>
+                <shape android:shape="rectangle"><corners android:radius="14dp" /><solid android:color="@color/md_primary" /></shape>
             </item>
         </selector>
     </item>
     <item android:id="@android:id/mask">
         <shape android:shape="rectangle">
-            <corners android:radius="100dp" />
+            <corners android:radius="14dp" />
             <solid android:color="#FFFFFFFF" />
         </shape>
     </item>
