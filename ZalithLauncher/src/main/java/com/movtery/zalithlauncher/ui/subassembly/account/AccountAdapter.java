@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.movtery.zalithlauncher.R;
 import com.movtery.zalithlauncher.databinding.ItemAccountManagerBinding;
+import com.movtery.zalithlauncher.feature.accounts.AccountType;
 import com.movtery.zalithlauncher.feature.accounts.AccountUtils;
 import com.movtery.zalithlauncher.feature.log.Logging;
 import com.movtery.zalithlauncher.utils.skin.SkinLoader;
@@ -81,6 +82,10 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.Holder> 
             if (AccountUtils.isMicrosoftAccount(account)) {
                 setButtonClickable(binding.refresh, true);
                 loginType = mContext.getString(R.string.account_microsoft_account);
+            } else if (AccountUtils.isSallyAuthAccount(account)) {
+                // on-device auth: nothing to refresh online; also renames legacy "FeatherAuth" accounts
+                setButtonClickable(binding.refresh, false);
+                loginType = AccountType.SALLY_AUTH.getType();
             } else if (AccountUtils.isOtherLoginAccount(account)) {
                 setButtonClickable(binding.refresh, true);
                 loginType = account.accountType;

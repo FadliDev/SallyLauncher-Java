@@ -68,6 +68,13 @@
         <item name="android:progressBarStyleHorizontal">@style/Widget.Zalith.ProgressBar.Horizontal</item>
         <item name="android:progressBarStyle">@style/Widget.Zalith.ProgressBar.Circular</item>
         <item name="android:progressBarStyleSmall">@style/Widget.Zalith.ProgressBar.Circular</item>
+        <item name="seekBarStyle">@style/Widget.Zalith.SeekBar</item>
+        <item name="android:seekBarStyle">@style/Widget.Zalith.SeekBar</item>
+        <item name="checkboxStyle">@style/Widget.Zalith.CheckBox</item>
+        <item name="android:checkboxStyle">@style/Widget.Zalith.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.Zalith.RadioButton</item>
+        <item name="android:radioButtonStyle">@style/Widget.Zalith.RadioButton</item>
+        <item name="android:textCursorDrawable">@drawable/md_cursor</item>
     </style>
 
     <!-- ============================================================ -->
@@ -166,6 +173,13 @@
         <item name="android:buttonStyle">@style/Widget.Zalith.Button</item>
         <item name="editTextStyle">@style/Widget.Zalith.EditText</item>
         <item name="android:editTextStyle">@style/Widget.Zalith.EditText</item>
+        <item name="seekBarStyle">@style/Widget.Zalith.SeekBar</item>
+        <item name="android:seekBarStyle">@style/Widget.Zalith.SeekBar</item>
+        <item name="checkboxStyle">@style/Widget.Zalith.CheckBox</item>
+        <item name="android:checkboxStyle">@style/Widget.Zalith.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.Zalith.RadioButton</item>
+        <item name="android:radioButtonStyle">@style/Widget.Zalith.RadioButton</item>
+        <item name="android:textCursorDrawable">@drawable/md_cursor</item>
         <item name="android:scrollbarThumbVertical">@drawable/md_scrollbar_thumb</item>
         <item name="android:scrollbarThumbHorizontal">@drawable/md_scrollbar_thumb</item>
     </style>
@@ -183,6 +197,16 @@
         <item name="android:buttonBarButtonStyle">@style/Widget.Zalith.Button.Text</item>
         <item name="android:scrollbarThumbVertical">@drawable/md_scrollbar_thumb</item>
         <item name="android:scrollbarThumbHorizontal">@drawable/md_scrollbar_thumb</item>
+    
+        <item name="editTextStyle">@style/Widget.Zalith.EditText</item>
+        <item name="android:editTextStyle">@style/Widget.Zalith.EditText</item>
+        <item name="seekBarStyle">@style/Widget.Zalith.SeekBar</item>
+        <item name="android:seekBarStyle">@style/Widget.Zalith.SeekBar</item>
+        <item name="checkboxStyle">@style/Widget.Zalith.CheckBox</item>
+        <item name="android:checkboxStyle">@style/Widget.Zalith.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.Zalith.RadioButton</item>
+        <item name="android:radioButtonStyle">@style/Widget.Zalith.RadioButton</item>
+        <item name="android:textCursorDrawable">@drawable/md_cursor</item>
     </style>
 
     <style name="Zalith.DialogAnimation" parent="@android:style/Animation.Dialog">
@@ -283,10 +307,39 @@
         <item name="android:textSize">@dimen/_12ssp</item>
     </style>
 
+    <!-- MD3 slider: 6dp rounded track, 20dp handle with halo (see md_slider_track / md_slider_thumb) -->
     <style name="Widget.Zalith.SeekBar" parent="@android:style/Widget.Material.SeekBar">
-        <item name="android:progressTint">@color/md_primary</item>
-        <item name="android:progressBackgroundTint">@color/md_secondary_container</item>
-        <item name="android:thumbTint">@color/md_primary</item>
+        <item name="android:progressDrawable">@drawable/md_slider_track</item>
+        <item name="android:thumb">@drawable/md_slider_thumb</item>
+        <item name="android:splitTrack">false</item>
+        <item name="android:progressTint">@null</item>
+        <item name="android:progressBackgroundTint">@null</item>
+        <item name="android:secondaryProgressTint">@null</item>
+        <item name="android:thumbTint">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:maxHeight">36dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <!-- ============================================================ -->
+    <!--  Checkbox / radio (MD3 tint: primary / outline / disabled)   -->
+    <!-- ============================================================ -->
+    <style name="Widget.Zalith.CheckBox" parent="@style/Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/md_control_tint</item>
+        <item name="android:textColor">@color/md_on_surface</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:minHeight">32dp</item>
+    </style>
+
+    <style name="Widget.Zalith.RadioButton" parent="@style/Widget.Material3.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/md_control_tint</item>
+        <item name="android:textColor">@color/md_on_surface</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:minHeight">32dp</item>
     </style>
 
     <!-- ============================================================ -->

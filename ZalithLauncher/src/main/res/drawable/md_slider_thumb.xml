@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  MD3 slider handle: 20dp primary circle inside a constant 36dp box
+  (the box keeps the thumb size / travel identical in every state); a soft halo shows while pressed or focused.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="100"
+    android:exitFadeDuration="100">
+    <item android:state_enabled="false">
+        <layer-list>
+            <item android:width="36dp" android:height="36dp">
+                <shape android:shape="rectangle"><solid android:color="@android:color/transparent" /><size android:width="36dp" android:height="36dp" /></shape>
+            </item>
+            <item android:width="16dp" android:height="16dp" android:gravity="center">
+                <shape android:shape="oval"><solid android:color="@color/md_disabled_content" /></shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:width="36dp" android:height="36dp">
+                <shape android:shape="oval"><solid android:color="@color/md_state_pressed_primary" /><size android:width="36dp" android:height="36dp" /></shape>
+            </item>
+            <item android:width="20dp" android:height="20dp" android:gravity="center">
+                <shape android:shape="oval"><solid android:color="@color/md_primary" /></shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list>
+            <item android:width="36dp" android:height="36dp">
+                <shape android:shape="oval"><solid android:color="@color/md_state_pressed_primary" /><size android:width="36dp" android:height="36dp" /></shape>
+            </item>
+            <item android:width="20dp" android:height="20dp" android:gravity="center">
+                <shape android:shape="oval"><solid android:color="@color/md_primary" /></shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:width="36dp" android:height="36dp">
+                <shape android:shape="rectangle"><solid android:color="@android:color/transparent" /><size android:width="36dp" android:height="36dp" /></shape>
+            </item>
+            <item android:width="20dp" android:height="20dp" android:gravity="center">
+                <shape android:shape="oval"><solid android:color="@color/md_primary" /></shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

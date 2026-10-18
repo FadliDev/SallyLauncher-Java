@@ -242,6 +242,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:text="@string/generic_refresh"
                 app:layout_constraintBottom_toTopOf="@+id/return_button"
                 app:layout_constraintEnd_toEndOf="parent"
