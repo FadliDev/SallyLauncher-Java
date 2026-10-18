@@ -93,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/versionCustomInfo_summary"
-                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:background="@drawable/background_edit_box"
                     android:paddingHorizontal="@dimen/_8sdp" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
@@ -324,7 +324,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/javaArgs_summary"
-                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:background="@drawable/background_edit_box"
                     android:paddingHorizontal="@dimen/_8sdp" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
@@ -540,7 +540,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/gameMenuMemoryText_summary"
-                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:background="@drawable/background_edit_box"
                     android:paddingHorizontal="@dimen/_8sdp" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
