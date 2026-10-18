@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +9,6 @@
     android:background="@drawable/background_item"
     android:paddingVertical="@dimen/_12sdp"
     app:ripple_for_constraint="true">
-
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/avatar_view"
         android:layout_width="@dimen/_28sdp"
@@ -22,7 +22,6 @@
         app:strokeWidth="@dimen/_1sdp"
         app:shapeAppearanceOverlay="@style/RoundImageView"
         tools:ignore="ContentDescription" />
-
     <TextView
         android:id="@+id/name_view"
         android:layout_width="0dp"
@@ -38,7 +37,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="HardcodedText" />
-
     <TextView
         android:id="@+id/time_view"
         android:layout_width="wrap_content"
@@ -51,7 +49,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="HardcodedText" />
-
     <TextView
         android:id="@+id/slip"
         android:layout_width="wrap_content"
@@ -64,7 +61,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="HardcodedText" />
-
     <TextView
         android:id="@+id/amount_view"
         android:layout_width="wrap_content"
@@ -77,5 +73,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="HardcodedText" />
-
 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>

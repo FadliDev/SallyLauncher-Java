@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minWidth="@dimen/dialog_min_width"
     android:orientation="vertical"
-    android:padding="@dimen/_8sdp">
-
+    android:padding="@dimen/_20sdp">
     <TextView
         android:id="@+id/server_name"
         android:layout_width="wrap_content"
@@ -16,14 +16,12 @@
         android:singleLine="true"
         android:textSize="@dimen/_14ssp"
         android:textStyle="bold" />
-
     <TextView
         android:id="@+id/email_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_8sdp"
-        android:text="@string/other_login_email"/>
-
+        android:text="@string/other_login_email" />
     <com.movtery.zalithlauncher.ui.view.AnimEditText
         android:id="@+id/email_edit"
         android:layout_width="match_parent"
@@ -36,15 +34,13 @@
         android:inputType="textEmailAddress"
         android:paddingHorizontal="@dimen/_8sdp"
         tools:ignore="LabelFor" />
-
     <TextView
         android:id="@+id/password_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_8sdp"
         android:layout_marginHorizontal="@dimen/_8sdp"
-        android:text="@string/other_login_password"/>
-
+        android:text="@string/other_login_password" />
     <com.movtery.zalithlauncher.ui.view.AnimEditText
         android:id="@+id/password_edit"
         android:layout_width="match_parent"
@@ -56,7 +52,6 @@
         android:inputType="textPassword"
         android:paddingHorizontal="@dimen/_8sdp"
         tools:ignore="LabelFor" />
-
     <TextView
         android:id="@+id/registry_text"
         android:layout_width="wrap_content"
@@ -65,32 +60,27 @@
         android:layout_marginHorizontal="@dimen/_8sdp"
         android:background="?attr/selectableItemBackground"
         android:text="@string/other_login_registry_now"
-        android:textColor="@android:color/holo_green_dark"/>
-
+        android:textColor="@android:color/holo_green_dark" />
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_4sdp"
         android:layout_marginTop="@dimen/_4sdp"
-        android:gravity="center_horizontal"
+        android:gravity="end"
         android:orientation="horizontal">
-
         <com.movtery.zalithlauncher.ui.view.AnimButton
             android:id="@+id/cancel_button"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="@dimen/_2sdp"
-            android:text="@android:string/cancel" />
-
+            android:text="@android:string/cancel"
+            style="@style/Widget.Zalith.Button.Text" />
         <com.movtery.zalithlauncher.ui.view.AnimButton
             android:id="@+id/login_button"
-            android:layout_width="0dp"
+            style="@style/Widget.Zalith.Button.Filled"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="@dimen/_2sdp"
             android:text="@string/generic_login" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </androidx.appcompat.widget.LinearLayoutCompat>

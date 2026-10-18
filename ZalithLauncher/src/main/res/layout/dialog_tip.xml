@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:minWidth="@dimen/dialog_min_width"
     android:orientation="vertical"
-    android:padding="@dimen/_8sdp">
-
+    android:padding="@dimen/_20sdp">
     <LinearLayout
         android:id="@+id/title_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
         android:orientation="horizontal"
         tools:ignore="UseCompoundDrawables">
-
         <ImageView
             android:id="@+id/warning_icon"
             android:layout_width="@dimen/_20sdp"
@@ -22,7 +21,6 @@
             android:src="@drawable/ic_warning"
             android:visibility="gone"
             android:contentDescription="@string/generic_warning" />
-
         <TextView
             android:id="@+id/title_view"
             android:layout_width="wrap_content"
@@ -30,69 +28,54 @@
             android:layout_gravity="center_vertical"
             android:singleLine="true"
             android:text="@string/generic_tip"
-            android:textSize="@dimen/_14ssp"
-            android:textStyle="bold" >
-
-        </TextView>
-
+            android:textAppearance="@style/TextAppearance.Zalith.HeadlineSmall" />
     </LinearLayout>
-
     <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_8sdp">
-
         <LinearLayout
             android:id="@+id/content_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/message_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_4sdp"
-                android:textSize="@dimen/_13ssp"
-                tools:text="test some message"/>
-
+                tools:text="test some message"
+                android:textAppearance="@style/TextAppearance.Zalith.BodyMedium" />
             <CheckBox
                 android:id="@+id/check_box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:visibility="gone"
-                tools:text="test some message"/>
-
+                tools:text="test some message" />
             <LinearLayout
                 android:id="@+id/buttons_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_4sdp"
-                android:gravity="center_horizontal"
+                android:gravity="end"
                 android:orientation="horizontal">
-
                 <com.movtery.zalithlauncher.ui.view.AnimButton
                     android:id="@+id/cancel_button"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_2sdp"
-                    android:layout_weight="1"
-                    android:text="@android:string/cancel" />
-
+                    android:text="@android:string/cancel"
+                    style="@style/Widget.Zalith.Button.Text" />
                 <com.movtery.zalithlauncher.ui.view.AnimButton
                     android:id="@+id/confirm_button"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_2sdp"
-                    android:layout_weight="1"
-                    android:text="@string/generic_confirm" />
-
+                    android:text="@string/generic_confirm"
+                    style="@style/Widget.Zalith.Button.Filled" />
             </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
-
 </androidx.appcompat.widget.LinearLayoutCompat>

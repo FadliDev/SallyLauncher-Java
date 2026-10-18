@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/_8sdp">
-
+    android:padding="@dimen/_20sdp">
     <TextView
         android:id="@+id/title_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
         android:text="@string/download_install_dependencies"
-        android:textSize="@dimen/_14ssp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.Zalith.HeadlineSmall" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="0dp"
@@ -33,7 +31,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_view" />
-
     <TextView
         android:id="@+id/tip_view"
         android:layout_width="0dp"
@@ -46,38 +43,33 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_2sdp"
         android:paddingHorizontal="@dimen/_4sdp"
-        android:gravity="center_horizontal"
+        android:gravity="end"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
         <com.movtery.zalithlauncher.ui.view.AnimButton
             android:id="@+id/close_button"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_2sdp"
-            android:layout_weight="1"
-            android:text="@string/generic_close" />
-
+            android:text="@string/generic_close"
+            style="@style/Widget.Zalith.Button.Text" />
         <com.movtery.zalithlauncher.ui.view.AnimButton
             android:id="@+id/download_button"
-            android:layout_width="0dp"
+            style="@style/Widget.Zalith.Button.Filled"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/_8sdp"
             android:layout_marginStart="@dimen/_2sdp"
-            android:layout_weight="1"
             android:textAllCaps="false"
             android:text="@string/download_install" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

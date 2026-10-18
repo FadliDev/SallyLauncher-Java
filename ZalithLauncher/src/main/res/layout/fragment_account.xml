@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_menu_main"
@@ -8,7 +9,6 @@
     android:background="@android:color/transparent"
     android:gravity="top"
     android:orientation="vertical">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/account_menu"
         android:layout_width="0dp"
@@ -18,7 +18,6 @@
         app:layout_constraintHorizontal_weight="6.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/account_type_layout"
             android:layout_width="0dp"
@@ -31,7 +30,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
-
             <com.angcyo.tablayout.DslTabLayout
                 android:id="@+id/account_type_tab"
                 android:layout_width="0dp"
@@ -42,13 +40,11 @@
                 app:layout_constraintEnd_toStartOf="@id/add_server"
                 app:tab_deselect_color="@color/black_or_white"
                 app:tab_select_color="@color/black_or_white">
-
                 <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/add_microsoft_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="@dimen/_8sdp">
-
                     <ImageView
                         android:id="@+id/add_microsoft_image"
                         android:layout_width="wrap_content"
@@ -56,23 +52,19 @@
                         android:layout_centerVertical="true"
                         android:src="@drawable/ic_add"
                         tools:ignore="ContentDescription" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@id/add_microsoft_image"
                         android:paddingHorizontal="@dimen/_8sdp"
-                        android:text="@string/account_microsoft_account"/>
-
+                        android:text="@string/account_microsoft_account" />
                 </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
                 <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/add_local_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="@dimen/_8sdp">
-
                     <ImageView
                         android:id="@+id/add_local_image"
                         android:layout_width="wrap_content"
@@ -80,19 +72,15 @@
                         android:layout_centerVertical="true"
                         android:src="@drawable/ic_add"
                         tools:ignore="ContentDescription" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@id/add_local_image"
                         android:paddingHorizontal="@dimen/_8sdp"
-                        android:text="@string/account_local_account"/>
-
+                        android:text="@string/account_local_account" />
                 </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             </com.angcyo.tablayout.DslTabLayout>
-
             <ImageView
                 android:id="@+id/add_server"
                 android:layout_width="@dimen/_24sdp"
@@ -107,9 +95,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:ignore="ContentDescription" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/accounts_recycler"
             android:layout_width="match_parent"
@@ -121,10 +107,8 @@
             android:paddingVertical="@dimen/_4sdp"
             android:background="@drawable/background_card"
             app:layout_constraintTop_toBottomOf="@id/account_type_layout"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
+            app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/operation_layout"
         android:layout_width="0dp"
@@ -134,7 +118,6 @@
         app:layout_constraintHorizontal_weight="3"
         app:layout_constraintStart_toEndOf="@id/account_menu"
         app:layout_constraintTop_toTopOf="parent">
-
         <View
             android:id="@+id/shadowView"
             android:layout_width="@dimen/_4sdp"
@@ -143,7 +126,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/operation_main_layout"
             android:layout_width="0dp"
@@ -153,7 +135,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/shadowView">
-
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/return_button"
                 android:layout_width="0dp"
@@ -166,7 +147,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="MissingConstraints" />
-
             <include
                 android:id="@+id/view_account"
                 layout="@layout/view_account"
@@ -176,10 +156,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-

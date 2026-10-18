@@ -1,4 +1,5 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
     style="?android:attr/spinnerItemStyle"
     android:singleLine="true"
@@ -7,4 +8,4 @@
     android:ellipsize="marquee"
     android:textAlignment="inherit"
     android:gravity="center"
-    android:minHeight="48dp"/>
+    android:minHeight="48dp" />

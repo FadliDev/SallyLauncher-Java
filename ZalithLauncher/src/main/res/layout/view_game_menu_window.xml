@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/background_game_menu">
-
     <ImageView
         android:id="@+id/settings_button"
         android:layout_width="@dimen/_28sdp"
@@ -14,7 +14,6 @@
         android:src="@drawable/ic_menu_settings"
         android:clickable="false"
         tools:ignore="ContentDescription" />
-
     <TextView
         android:id="@+id/fps_text"
         android:layout_width="wrap_content"
@@ -26,7 +25,6 @@
         android:text="FPS: 114514"
         android:textColor="@android:color/white"
         tools:ignore="HardcodedText" />
-
     <TextView
         android:id="@+id/memory_text"
         android:layout_width="wrap_content"
@@ -38,5 +36,4 @@
         android:text="M: 0MB/0MB"
         android:textColor="@android:color/white"
         tools:ignore="HardcodedText" />
-
 </RelativeLayout>

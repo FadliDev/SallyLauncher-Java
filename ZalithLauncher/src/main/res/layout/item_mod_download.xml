@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +9,6 @@
     android:background="@drawable/background_item"
     android:padding="@dimen/_8sdp"
     app:ripple_for_constraint="true">
-
     <LinearLayout
         android:id="@+id/modloader_layout"
         android:layout_width="wrap_content"
@@ -20,7 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
-
         <ImageView
             android:id="@+id/modloader_icon"
             android:layout_width="@dimen/_18sdp"
@@ -28,7 +27,6 @@
             android:scaleType="centerInside"
             tools:src="@drawable/ic_neoforge"
             tools:ignore="ContentDescription" />
-
         <TextView
             android:id="@+id/modloader_name"
             android:layout_width="wrap_content"
@@ -36,10 +34,8 @@
             android:layout_marginStart="@dimen/_4sdp"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_11ssp"
-            tools:text="NeoForge"/>
-
+            tools:text="NeoForge" />
     </LinearLayout>
-
     <TextView
         android:id="@+id/mod_version_id"
         android:layout_width="wrap_content"
@@ -52,7 +48,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="HardcodedText" />
-
     <TextView
         android:id="@+id/is_adapt"
         android:layout_width="0dp"
@@ -73,7 +68,6 @@
         app:layout_constraintEnd_toStartOf="@id/current_version_icon"
         app:layout_constraintStart_toEndOf="@id/mod_version_id"
         app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/current_version_icon"
         android:layout_width="@dimen/_18sdp"
@@ -83,5 +77,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
-
 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>

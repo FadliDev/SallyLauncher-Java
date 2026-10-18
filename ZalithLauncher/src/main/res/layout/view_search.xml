@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +9,6 @@
     android:background="@drawable/background_card"
     android:paddingHorizontal="@dimen/_2sdp"
     android:paddingVertical="@dimen/_10sdp">
-
     <com.movtery.zalithlauncher.ui.view.AnimEditText
         android:id="@+id/edit_text"
         android:layout_width="0dp"
@@ -24,13 +24,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
-
     <ImageButton
         android:id="@+id/search_button"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="@dimen/_12sdp"
-        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:background="@drawable/md_icon_button"
         android:contentDescription="@string/generic_search"
         android:src="@drawable/ic_search"
         android:scaleType="centerInside"
@@ -39,7 +38,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/edit_text"
         app:layout_constraintTop_toTopOf="@+id/edit_text" />
-
     <CheckBox
         android:id="@+id/case_sensitive"
         android:layout_width="wrap_content"
@@ -50,7 +48,6 @@
         android:text="@string/search_case_sensitive"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/search_button" />
-
     <CheckBox
         android:id="@+id/show_search_results_only"
         android:layout_width="wrap_content"
@@ -59,7 +56,6 @@
         android:text="@string/search_only_show_results"
         app:layout_constraintStart_toStartOf="@+id/case_sensitive"
         app:layout_constraintTop_toBottomOf="@+id/case_sensitive" />
-
     <TextView
         android:id="@+id/text"
         android:layout_width="0dp"
@@ -70,5 +66,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/show_search_results_only" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

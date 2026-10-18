@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,6 @@
     android:orientation="vertical"
     android:paddingHorizontal="@dimen/_12sdp"
     tools:ignore="ContentDescription,HardcodedText">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/name_layout"
         android:layout_width="match_parent"
@@ -17,7 +17,6 @@
         android:paddingHorizontal="@dimen/_8sdp"
         android:paddingVertical="@dimen/_12sdp"
         app:layout_constraintTop_toTopOf="parent">
-
         <ImageView
             android:id="@+id/back"
             android:layout_width="@dimen/_28sdp"
@@ -29,7 +28,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/name_title"
             android:layout_width="wrap_content"
@@ -40,7 +38,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/back"
             app:layout_constraintTop_toTopOf="parent" />
-
         <com.movtery.zalithlauncher.ui.view.AnimEditText
             android:id="@+id/name_edit"
             android:layout_width="0dp"
@@ -55,7 +52,6 @@
             app:layout_constraintEnd_toStartOf="@id/install"
             app:layout_constraintStart_toEndOf="@id/name_title"
             app:layout_constraintTop_toTopOf="parent" />
-
         <ImageView
             android:id="@+id/install"
             android:layout_width="@dimen/_28sdp"
@@ -66,26 +62,21 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <ScrollView
         android:id="@+id/addons_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_8sdp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
-
                 <com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
                     android:id="@+id/optifine_layout"
                     android:layout_width="0dp"
@@ -96,7 +87,6 @@
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_12sdp"
                     app:ripple_for_constraint="true">
-
                     <ImageView
                         android:id="@+id/optifine_icon"
                         android:layout_width="@dimen/_36sdp"
@@ -109,7 +99,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -119,13 +108,11 @@
                         app:layout_constraintEnd_toStartOf="@id/optifine_install"
                         app:layout_constraintStart_toEndOf="@id/optifine_icon"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="OptiFine"
                             android:textStyle="bold" />
-
                         <TextView
                             android:id="@+id/optifine_version"
                             android:layout_width="wrap_content"
@@ -138,9 +125,7 @@
                             android:singleLine="true"
                             android:textStyle="bold"
                             android:visibility="gone" />
-
                     </LinearLayout>
-
                     <TextView
                         android:id="@+id/optifine_install"
                         android:layout_width="wrap_content"
@@ -151,7 +136,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/optifine_delete"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/optifine_delete"
                         android:layout_width="@dimen/_32sdp"
@@ -163,9 +147,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>
-
                 <com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
                     android:id="@+id/forge_layout"
                     android:layout_width="0dp"
@@ -176,7 +158,6 @@
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_12sdp"
                     app:ripple_for_constraint="true">
-
                     <ImageView
                         android:id="@+id/forge_icon"
                         android:layout_width="@dimen/_36sdp"
@@ -187,7 +168,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -197,13 +177,11 @@
                         app:layout_constraintEnd_toStartOf="@id/forge_install"
                         app:layout_constraintStart_toEndOf="@id/forge_icon"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Forge"
                             android:textStyle="bold" />
-
                         <TextView
                             android:id="@+id/forge_version"
                             android:layout_width="wrap_content"
@@ -216,9 +194,7 @@
                             android:singleLine="true"
                             android:textStyle="bold"
                             android:visibility="gone" />
-
                     </LinearLayout>
-
                     <TextView
                         android:id="@+id/forge_install"
                         android:layout_width="wrap_content"
@@ -229,7 +205,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/forge_delete"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/forge_delete"
                         android:layout_width="@dimen/_32sdp"
@@ -241,11 +216,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>
-
             </LinearLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
                 android:id="@+id/neoforge_layout"
                 android:layout_width="match_parent"
@@ -255,7 +227,6 @@
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_12sdp"
                 app:ripple_for_constraint="true">
-
                 <ImageView
                     android:id="@+id/neoforge_icon"
                     android:layout_width="@dimen/_36sdp"
@@ -268,7 +239,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -278,13 +248,11 @@
                     app:layout_constraintEnd_toStartOf="@id/neoforge_install"
                     app:layout_constraintStart_toEndOf="@id/neoforge_icon"
                     app:layout_constraintTop_toTopOf="parent">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="NeoForge"
                         android:textStyle="bold" />
-
                     <TextView
                         android:id="@+id/neoforge_version"
                         android:layout_width="wrap_content"
@@ -297,9 +265,7 @@
                         android:singleLine="true"
                         android:textStyle="bold"
                         android:visibility="gone" />
-
                 </LinearLayout>
-
                 <TextView
                     android:id="@+id/neoforge_install"
                     android:layout_width="wrap_content"
@@ -310,7 +276,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/neoforge_delete"
                     app:layout_constraintTop_toTopOf="parent" />
-
                 <ImageView
                     android:id="@+id/neoforge_delete"
                     android:layout_width="@dimen/_32sdp"
@@ -322,16 +287,13 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
             </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
-
                 <com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
                     android:id="@+id/fabric_layout"
                     android:layout_width="0dp"
@@ -342,7 +304,6 @@
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_12sdp"
                     app:ripple_for_constraint="true">
-
                     <ImageView
                         android:id="@+id/fabric_icon"
                         android:layout_width="@dimen/_36sdp"
@@ -353,7 +314,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -363,13 +323,11 @@
                         app:layout_constraintEnd_toStartOf="@id/fabric_install"
                         app:layout_constraintStart_toEndOf="@id/fabric_icon"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Fabric"
                             android:textStyle="bold" />
-
                         <TextView
                             android:id="@+id/fabric_version"
                             android:layout_width="wrap_content"
@@ -382,9 +340,7 @@
                             android:singleLine="true"
                             android:textStyle="bold"
                             android:visibility="gone" />
-
                     </LinearLayout>
-
                     <TextView
                         android:id="@+id/fabric_install"
                         android:layout_width="wrap_content"
@@ -395,7 +351,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/fabric_delete"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/fabric_delete"
                         android:layout_width="@dimen/_32sdp"
@@ -407,9 +362,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>
-
                 <com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
                     android:id="@+id/fabric_api_layout"
                     android:layout_width="0dp"
@@ -420,7 +373,6 @@
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_12sdp"
                     app:ripple_for_constraint="true">
-
                     <ImageView
                         android:id="@+id/fabric_api_icon"
                         android:layout_width="@dimen/_36sdp"
@@ -431,7 +383,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -441,13 +392,11 @@
                         app:layout_constraintEnd_toStartOf="@id/fabric_api_install"
                         app:layout_constraintStart_toEndOf="@id/fabric_api_icon"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Fabric API"
                             android:textStyle="bold" />
-
                         <TextView
                             android:id="@+id/fabric_api_version"
                             android:layout_width="wrap_content"
@@ -460,9 +409,7 @@
                             android:singleLine="true"
                             android:textStyle="bold"
                             android:visibility="gone" />
-
                     </LinearLayout>
-
                     <TextView
                         android:id="@+id/fabric_api_install"
                         android:layout_width="wrap_content"
@@ -473,7 +420,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/fabric_api_delete"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/fabric_api_delete"
                         android:layout_width="@dimen/_32sdp"
@@ -485,18 +431,14 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/_8sdp"
                 android:baselineAligned="false"
                 android:orientation="horizontal">
-
                 <com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
                     android:id="@+id/quilt_layout"
                     android:layout_width="0dp"
@@ -507,7 +449,6 @@
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_12sdp"
                     app:ripple_for_constraint="true">
-
                     <ImageView
                         android:id="@+id/quilt_icon"
                         android:layout_width="@dimen/_36sdp"
@@ -518,7 +459,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -528,13 +468,11 @@
                         app:layout_constraintEnd_toStartOf="@id/quilt_install"
                         app:layout_constraintStart_toEndOf="@id/quilt_icon"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Quilt"
                             android:textStyle="bold" />
-
                         <TextView
                             android:id="@+id/quilt_version"
                             android:layout_width="wrap_content"
@@ -547,9 +485,7 @@
                             android:singleLine="true"
                             android:textStyle="bold"
                             android:visibility="gone" />
-
                     </LinearLayout>
-
                     <TextView
                         android:id="@+id/quilt_install"
                         android:layout_width="wrap_content"
@@ -560,7 +496,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/quilt_delete"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/quilt_delete"
                         android:layout_width="@dimen/_32sdp"
@@ -572,9 +507,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>
-
                 <com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
                     android:id="@+id/quilt_api_layout"
                     android:layout_width="0dp"
@@ -585,7 +518,6 @@
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_12sdp"
                     app:ripple_for_constraint="true">
-
                     <ImageView
                         android:id="@+id/quilt_api_icon"
                         android:layout_width="@dimen/_36sdp"
@@ -596,7 +528,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -606,13 +537,11 @@
                         app:layout_constraintEnd_toStartOf="@id/quilt_api_install"
                         app:layout_constraintStart_toEndOf="@id/quilt_api_icon"
                         app:layout_constraintTop_toTopOf="parent">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="QSL"
                             android:textStyle="bold" />
-
                         <TextView
                             android:id="@+id/quilt_api_version"
                             android:layout_width="wrap_content"
@@ -625,9 +554,7 @@
                             android:singleLine="true"
                             android:textStyle="bold"
                             android:visibility="gone" />
-
                     </LinearLayout>
-
                     <TextView
                         android:id="@+id/quilt_api_install"
                         android:layout_width="wrap_content"
@@ -638,7 +565,6 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/quilt_api_delete"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/quilt_api_delete"
                         android:layout_width="@dimen/_32sdp"
@@ -650,13 +576,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>
-
             </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>

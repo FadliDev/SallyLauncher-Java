@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:ignore="UseSwitchCompatOrMaterialXml">
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_12sdp"
         android:orientation="vertical"
         android:paddingVertical="@dimen/_12sdp">
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/custom_controls_category"
             android:layout_width="match_parent"
@@ -20,21 +19,18 @@
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:text="@string/setting_category_control"
                 android:textColor="@color/settings_category" />
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/disableGestures_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/disableGestures_title"
                     android:layout_width="wrap_content"
@@ -44,7 +40,6 @@
                     android:layout_toStartOf="@+id/disableGestures"
                     android:text="@string/setting_disable_gestures_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/disableGestures_summary"
                     android:layout_width="0dp"
@@ -54,22 +49,20 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/disableGestures"
                     android:text="@string/setting_disable_gestures_desc" />
-
                 <Switch
                     android:id="@+id/disableGestures"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    style="@style/Widget.Zalith.Switch" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/disableDoubleTap_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/disableDoubleTap_title"
                     android:layout_width="wrap_content"
@@ -79,7 +72,6 @@
                     android:layout_toStartOf="@+id/disableDoubleTap"
                     android:text="@string/setting_disable_swap_hand_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/disableDoubleTap_summary"
                     android:layout_width="0dp"
@@ -89,21 +81,19 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/disableDoubleTap"
                     android:text="@string/setting_disable_swap_hand_desc" />
-
                 <Switch
                     android:id="@+id/disableDoubleTap"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    style="@style/Widget.Zalith.Switch" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/timeLongPressTrigger_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground">
-
                 <TextView
                     android:id="@+id/timeLongPressTrigger_title"
                     android:layout_width="wrap_content"
@@ -114,7 +104,6 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:text="@string/setting_longpress_trigger_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/timeLongPressTrigger_summary"
                     android:layout_width="0dp"
@@ -124,7 +113,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginHorizontal="@dimen/_12sdp"
                     android:text="@string/setting_longpress_trigger_desc" />
-
                 <SeekBar
                     android:id="@+id/timeLongPressTrigger"
                     android:layout_width="wrap_content"
@@ -134,8 +122,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/timeLongPressTrigger_value"
                     android:max="1000"
-                    android:min="100" />
-
+                    android:min="100"
+                    style="@style/Widget.Zalith.SeekBar" />
                 <TextView
                     android:id="@+id/timeLongPressTrigger_value"
                     android:layout_width="wrap_content"
@@ -146,9 +134,7 @@
                     android:layout_marginEnd="@dimen/_12sdp"
                     tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/controls_category"
             android:layout_width="match_parent"
@@ -158,20 +144,17 @@
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:text="@string/pedit_control"
                 android:textColor="@color/settings_category" />
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/buttonscale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground">
-
                 <TextView
                     android:id="@+id/buttonscale_title"
                     android:layout_width="wrap_content"
@@ -182,7 +165,6 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:text="@string/setting_button_scale_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/buttonscale_summary"
                     android:layout_width="0dp"
@@ -192,7 +174,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginHorizontal="@dimen/_12sdp"
                     android:text="@string/setting_button_scale_desc" />
-
                 <SeekBar
                     android:id="@+id/buttonscale"
                     android:layout_width="wrap_content"
@@ -202,8 +183,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/buttonscale_value"
                     android:max="250"
-                    android:min="80" />
-
+                    android:min="80"
+                    style="@style/Widget.Zalith.SeekBar" />
                 <TextView
                     android:id="@+id/buttonscale_value"
                     android:layout_width="wrap_content"
@@ -214,14 +195,12 @@
                     android:layout_marginEnd="@dimen/_12sdp"
                     tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/buttonAllCaps_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/buttonAllCaps_title"
                     android:layout_width="wrap_content"
@@ -231,7 +210,6 @@
                     android:layout_toStartOf="@+id/buttonAllCaps"
                     android:text="@string/setting_button_allcaps_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/buttonAllCaps_summary"
                     android:layout_width="0dp"
@@ -241,17 +219,15 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/buttonAllCaps"
                     android:text="@string/setting_button_allcaps_desc" />
-
                 <Switch
                     android:id="@+id/buttonAllCaps"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    style="@style/Widget.Zalith.Switch" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/mouse_category"
             android:layout_width="match_parent"
@@ -261,20 +237,17 @@
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:text="@string/setting_category_virtual_mouse"
                 android:textColor="@color/settings_category" />
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/mousescale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground">
-
                 <TextView
                     android:id="@+id/mousescale_title"
                     android:layout_width="wrap_content"
@@ -285,7 +258,6 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:text="@string/mouse_settings_scale_name"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/mousescale_summary"
                     android:layout_width="0dp"
@@ -295,7 +267,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginHorizontal="@dimen/_12sdp"
                     android:text="@string/setting_mouse_scale_desc" />
-
                 <SeekBar
                     android:id="@+id/mousescale"
                     android:layout_width="wrap_content"
@@ -305,8 +276,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/mousescale_value"
                     android:max="300"
-                    android:min="25" />
-
+                    android:min="25"
+                    style="@style/Widget.Zalith.SeekBar" />
                 <TextView
                     android:id="@+id/mousescale_value"
                     android:layout_width="wrap_content"
@@ -317,13 +288,11 @@
                     android:layout_marginEnd="@dimen/_12sdp"
                     tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/mousespeed_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground">
-
                 <TextView
                     android:id="@+id/mousespeed_title"
                     android:layout_width="wrap_content"
@@ -334,7 +303,6 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:text="@string/mouse_settings_speed_name"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/mousespeed_summary"
                     android:layout_width="0dp"
@@ -344,7 +312,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginHorizontal="@dimen/_12sdp"
                     android:text="@string/setting_mouse_speed_desc" />
-
                 <SeekBar
                     android:id="@+id/mousespeed"
                     android:layout_width="wrap_content"
@@ -354,8 +321,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/mousespeed_value"
                     android:max="300"
-                    android:min="25" />
-
+                    android:min="25"
+                    style="@style/Widget.Zalith.SeekBar" />
                 <TextView
                     android:id="@+id/mousespeed_value"
                     android:layout_width="wrap_content"
@@ -366,21 +333,18 @@
                     android:layout_marginEnd="@dimen/_12sdp"
                     tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/mouse_start_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/mouse_start_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/setting_mouse_start_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/mouse_start_summary"
                     android:layout_width="0dp"
@@ -390,23 +354,21 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/mouse_start"
                     android:text="@string/setting_mouse_start_desc" />
-
                 <Switch
                     android:id="@+id/mouse_start"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:checked="true" />
+                    android:checked="true"
+                    style="@style/Widget.Zalith.Switch" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/custom_mouse_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/custom_mouse_title"
                     android:layout_width="wrap_content"
@@ -415,7 +377,6 @@
                     android:layout_alignParentEnd="true"
                     android:text="@string/custom_mouse_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/custom_mouse_summary"
                     android:layout_width="0dp"
@@ -425,9 +386,7 @@
                     android:layout_alignParentEnd="true"
                     android:text="@string/custom_mouse_desc" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/enableGyro_category"
             android:layout_width="match_parent"
@@ -437,21 +396,18 @@
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:text="@string/setting_category_gyro_controls"
                 android:textColor="@color/settings_category" />
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/enableGyro_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/enableGyro_title"
                     android:layout_width="wrap_content"
@@ -461,7 +417,6 @@
                     android:layout_toStartOf="@+id/enableGyro"
                     android:text="@string/setting_enable_gyro_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/enableGyro_summary"
                     android:layout_width="0dp"
@@ -471,21 +426,19 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/enableGyro"
                     android:text="@string/setting_enable_gyro_desc" />
-
                 <Switch
                     android:id="@+id/enableGyro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    style="@style/Widget.Zalith.Switch" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/gyroSensitivity_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground">
-
                 <TextView
                     android:id="@+id/gyroSensitivity_title"
                     android:layout_width="wrap_content"
@@ -496,7 +449,6 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:text="@string/setting_gyro_sensitivity_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/gyroSensitivity_summary"
                     android:layout_width="0dp"
@@ -506,7 +458,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginHorizontal="@dimen/_12sdp"
                     android:text="@string/setting_gyro_sensitivity_desc" />
-
                 <SeekBar
                     android:id="@+id/gyroSensitivity"
                     android:layout_width="wrap_content"
@@ -516,8 +467,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/gyroSensitivity_value"
                     android:max="300"
-                    android:min="25" />
-
+                    android:min="25"
+                    style="@style/Widget.Zalith.SeekBar" />
                 <TextView
                     android:id="@+id/gyroSensitivity_value"
                     android:layout_width="wrap_content"
@@ -528,13 +479,11 @@
                     android:layout_marginEnd="@dimen/_12sdp"
                     tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/gyroSampleRate_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground">
-
                 <TextView
                     android:id="@+id/gyroSampleRate_title"
                     android:layout_width="wrap_content"
@@ -545,7 +494,6 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:text="@string/setting_gyro_sample_rate_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/gyroSampleRate_summary"
                     android:layout_width="0dp"
@@ -555,7 +503,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginHorizontal="@dimen/_12sdp"
                     android:text="@string/setting_gyro_sample_rate_description" />
-
                 <SeekBar
                     android:id="@+id/gyroSampleRate"
                     android:layout_width="wrap_content"
@@ -565,8 +512,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/gyroSampleRate_value"
                     android:max="50"
-                    android:min="5" />
-
+                    android:min="5"
+                    style="@style/Widget.Zalith.SeekBar" />
                 <TextView
                     android:id="@+id/gyroSampleRate_value"
                     android:layout_width="wrap_content"
@@ -577,14 +524,12 @@
                     android:layout_marginEnd="@dimen/_12sdp"
                     tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/gyroSmoothing_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/gyroSmoothing_title"
                     android:layout_width="wrap_content"
@@ -594,7 +539,6 @@
                     android:layout_toStartOf="@+id/gyroSmoothing"
                     android:text="@string/setting_gyro_smoothing_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/gyroSmoothing_summary"
                     android:layout_width="0dp"
@@ -604,23 +548,21 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/gyroSmoothing"
                     android:text="@string/setting_gyro_smoothing_desc" />
-
                 <Switch
                     android:id="@+id/gyroSmoothing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:checked="true" />
+                    android:checked="true"
+                    style="@style/Widget.Zalith.Switch" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/gyroInvertX_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/gyroInvertX_title"
                     android:layout_width="wrap_content"
@@ -630,7 +572,6 @@
                     android:layout_toStartOf="@+id/gyroInvertX"
                     android:text="@string/setting_gyro_invert_x_axis"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/gyroInvertX_summary"
                     android:layout_width="0dp"
@@ -640,22 +581,20 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/gyroInvertX"
                     android:text="@string/setting_gyro_invert_x_axis_description" />
-
                 <Switch
                     android:id="@+id/gyroInvertX"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    style="@style/Widget.Zalith.Switch" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/gyroInvertY_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/gyroInvertY_title"
                     android:layout_width="wrap_content"
@@ -665,7 +604,6 @@
                     android:layout_toStartOf="@+id/gyroInvertY"
                     android:text="@string/setting_gyro_invert_y_axis"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/gyroInvertY_summary"
                     android:layout_width="0dp"
@@ -675,17 +613,15 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/gyroInvertY"
                     android:text="@string/setting_gyro_invert_y_axis_description" />
-
                 <Switch
                     android:id="@+id/gyroInvertY"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
+                    android:layout_centerVertical="true"
+                    style="@style/Widget.Zalith.Switch" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/controller_category"
             android:layout_width="match_parent"
@@ -695,21 +631,18 @@
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:text="@string/setting_category_controller_settings"
                 android:textColor="@color/settings_category" />
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/changeControllerBindings_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/changeControllerBindings_title"
                     android:layout_width="wrap_content"
@@ -718,7 +651,6 @@
                     android:layout_alignParentEnd="true"
                     android:text="@string/setting_remap_controller_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/changeControllerBindings_summary"
                     android:layout_width="0dp"
@@ -728,14 +660,12 @@
                     android:layout_alignParentEnd="true"
                     android:text="@string/setting_remap_controller_desc" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/resetControllerBindings_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
                 android:padding="@dimen/_12sdp">
-
                 <TextView
                     android:id="@+id/resetControllerBindings_title"
                     android:layout_width="wrap_content"
@@ -744,7 +674,6 @@
                     android:layout_alignParentEnd="true"
                     android:text="@string/setting_wipe_controller_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/resetControllerBindings_summary"
                     android:layout_width="0dp"
@@ -754,13 +683,11 @@
                     android:layout_alignParentEnd="true"
                     android:text="@string/setting_wipe_controller_desc" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/gamepad_deadzone_scale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground">
-
                 <TextView
                     android:id="@+id/gamepad_deadzone_scale_title"
                     android:layout_width="wrap_content"
@@ -771,7 +698,6 @@
                     android:layout_marginTop="@dimen/_12sdp"
                     android:text="@string/setting_deadzone_scale_title"
                     android:textColor="@color/black_or_white" />
-
                 <TextView
                     android:id="@+id/gamepad_deadzone_scale_summary"
                     android:layout_width="0dp"
@@ -781,7 +707,6 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginHorizontal="@dimen/_12sdp"
                     android:text="@string/setting_deadzone_scale_desc" />
-
                 <SeekBar
                     android:id="@+id/gamepad_deadzone_scale"
                     android:layout_width="wrap_content"
@@ -791,8 +716,8 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/gamepad_deadzone_scale_value"
                     android:max="200"
-                    android:min="50" />
-
+                    android:min="50"
+                    style="@style/Widget.Zalith.SeekBar" />
                 <TextView
                     android:id="@+id/gamepad_deadzone_scale_value"
                     android:layout_width="wrap_content"
@@ -803,9 +728,6 @@
                     android:layout_marginEnd="@dimen/_12sdp"
                     tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 </ScrollView>

@@ -9,4 +9,14 @@
     <declare-styleable name="AnimTextView">
         <attr name="ripple_for_text" format="boolean"/>
     </declare-styleable>
+    <!-- MD3 button variants for AnimButton -->
+    <declare-styleable name="AnimButton">
+        <attr name="animButtonVariant" format="enum">
+            <enum name="tonal" value="0"/>
+            <enum name="filled" value="1"/>
+            <enum name="outlined" value="2"/>
+            <enum name="text" value="3"/>
+            <enum name="destructive" value="4"/>
+        </attr>
+    </declare-styleable>
 </resources>

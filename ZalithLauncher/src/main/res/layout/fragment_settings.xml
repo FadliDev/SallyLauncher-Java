@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.movtery.zalithlauncher.ui.fragment.SettingsFragment"
     android:background="@color/background_app">
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/settings_viewpager"
         android:layout_width="0dp"
@@ -16,7 +16,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/settings_layout"
         app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/settings_layout"
         android:layout_width="wrap_content"
@@ -24,7 +23,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <View
             android:id="@+id/shadowView"
             android:layout_width="@dimen/_4sdp"
@@ -33,7 +31,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <com.angcyo.tablayout.DslTabLayout
             android:id="@+id/settings_tab"
             android:layout_width="wrap_content"
@@ -46,14 +43,12 @@
             app:tab_indicator_drawable="@drawable/selector_bar_vertical"
             app:tab_indicator_x_offset="@dimen/_6sdp"
             app:tab_orientation="VERTICAL">
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
                 <ImageView
                     android:id="@+id/video_image"
                     android:layout_width="@dimen/_32sdp"
@@ -66,7 +61,6 @@
                     android:scaleX="0.92"
                     android:scaleY="0.92"
                     app:srcCompat="@drawable/ic_setting_video" />
-
                 <TextView
                     android:layout_width="@dimen/_70sdp"
                     android:layout_height="wrap_content"
@@ -76,14 +70,12 @@
                     android:text="@string/setting_category_video"
                     android:textColor="@color/black_or_white" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="@+id/video_settings"
                 app:layout_constraintTop_toBottomOf="@+id/video_settings">
-
                 <ImageView
                     android:id="@+id/controls_image"
                     android:layout_width="@dimen/_32sdp"
@@ -96,7 +88,6 @@
                     android:scaleX="0.92"
                     android:scaleY="0.92"
                     app:srcCompat="@drawable/ic_menu_custom_controls" />
-
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -107,14 +98,12 @@
                     android:text="@string/setting_category_control"
                     android:textColor="@color/black_or_white" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="@+id/controls_settings"
                 app:layout_constraintTop_toBottomOf="@+id/controls_settings">
-
                 <ImageView
                     android:id="@+id/game_image"
                     android:layout_width="@dimen/_32sdp"
@@ -127,7 +116,6 @@
                     android:scaleX="0.8"
                     android:scaleY="0.8"
                     app:srcCompat="@drawable/ic_setting_game" />
-
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -138,14 +126,12 @@
                     android:text="@string/setting_category_game"
                     android:textColor="@color/black_or_white" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="@+id/game_settings"
                 app:layout_constraintTop_toBottomOf="@+id/game_settings">
-
                 <ImageView
                     android:id="@+id/launcher_image"
                     android:layout_width="@dimen/_32sdp"
@@ -158,7 +144,6 @@
                     android:scaleX="0.92"
                     android:scaleY="0.92"
                     app:srcCompat="@drawable/ic_setting_launcher" />
-
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -169,14 +154,12 @@
                     android:text="@string/setting_category_launcher"
                     android:textColor="@color/black_or_white" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="@+id/launcher_settings"
                 app:layout_constraintTop_toBottomOf="@+id/launcher_settings">
-
                 <ImageView
                     android:id="@+id/experimental_image"
                     android:layout_width="@dimen/_32sdp"
@@ -189,7 +172,6 @@
                     android:scaleX="0.92"
                     android:scaleY="0.92"
                     app:srcCompat="@drawable/ic_setting_experimental" />
-
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -200,9 +182,6 @@
                     android:text="@string/setting_category_experimental"
                     android:textColor="@color/black_or_white" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
         </com.angcyo.tablayout.DslTabLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,7 +9,6 @@
     android:background="@drawable/background_item"
     android:padding="@dimen/_8sdp"
     app:ripple_for_constraint="true">
-
     <TextView
         android:id="@+id/multirt_view_java_version"
         style="@style/TextAppearance.AppCompat.Body1"
@@ -22,7 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Java 8" />
-
     <TextView
         android:id="@+id/multirt_view_java_version_full"
         android:layout_width="wrap_content"
@@ -33,7 +32,6 @@
         app:layout_constraintStart_toEndOf="@+id/multirt_view_java_version"
         app:layout_constraintTop_toTopOf="@+id/multirt_view_java_version"
         tools:text="1.8.0_422" />
-
     <TextView
         android:id="@+id/multirt_provided_by_launcher"
         android:layout_width="wrap_content"
@@ -45,5 +43,4 @@
         app:layout_constraintBottom_toBottomOf="@+id/multirt_view_java_version_full"
         app:layout_constraintStart_toEndOf="@+id/multirt_view_java_version_full"
         app:layout_constraintTop_toTopOf="@+id/multirt_view_java_version_full" />
-
 </com.movtery.zalithlauncher.ui.layout.AnimConstraintLayout>

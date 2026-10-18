@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/transparent"
     android:orientation="vertical">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/files_layout"
         android:layout_width="0dp"
@@ -16,7 +16,6 @@
         app:layout_constraintHorizontal_weight="6.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -29,7 +28,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
             <com.movtery.zalithlauncher.ui.subassembly.filelist.FileRecyclerView
                 android:id="@+id/file_recycler_view"
                 android:layout_width="match_parent"
@@ -40,7 +38,6 @@
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_layout" />
-
             <TextView
                 android:id="@+id/nothing_text"
                 android:layout_width="wrap_content"
@@ -53,7 +50,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/title_layout"
                 android:layout_width="0dp"
@@ -61,7 +57,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
-
                 <com.movtery.zalithlauncher.ui.view.AnimTextView
                     android:id="@+id/current_path"
                     android:layout_width="0dp"
@@ -75,7 +70,6 @@
                     app:layout_constraintEnd_toStartOf="@+id/select_all"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText" />
-
                 <com.movtery.zalithlauncher.ui.view.AnimCheckBox
                     android:id="@+id/select_all"
                     android:layout_width="wrap_content"
@@ -85,13 +79,9 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/operate_layout"
         android:layout_width="0dp"
@@ -101,7 +91,6 @@
         app:layout_constraintHorizontal_weight="3"
         app:layout_constraintStart_toEndOf="@+id/files_layout"
         app:layout_constraintTop_toTopOf="parent">
-
         <View
             android:id="@+id/shadowView"
             android:layout_width="@dimen/_4sdp"
@@ -110,7 +99,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/operate_layout"
             app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/operate_main_layout"
             android:layout_width="0dp"
@@ -120,12 +108,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/shadowView">
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/operate_buttons_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/external_storage"
                     android:layout_width="0dp"
@@ -154,7 +140,6 @@
                         android:textColor="@color/black_or_white"
                         android:text="@string/file_external_storage" />
                 </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
                 <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                     android:id="@+id/software_private"
                     android:layout_width="0dp"
@@ -182,7 +167,6 @@
                         android:textColor="@color/black_or_white"
                         android:text="@string/file_software_private" />
                 </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
-
                 <com.movtery.zalithlauncher.ui.view.AnimCheckBox
                     android:id="@+id/multi_select_files"
                     android:layout_width="0dp"
@@ -195,7 +179,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="RtlSymmetry" />
-
                 <include
                     android:id="@+id/operate_view"
                     layout="@layout/view_file_action_bar"
@@ -205,8 +188,7 @@
                     android:layout_marginBottom="@dimen/_26sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
-
+                    app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
