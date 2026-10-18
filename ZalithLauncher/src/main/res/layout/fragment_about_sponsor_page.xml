@@ -26,10 +26,10 @@
             android:layout_marginTop="@dimen/_8sdp"
             android:text="@string/about_sponsors"
             android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:fontFamily="sans-serif-medium"/>
+            app:layout_constraintTop_toTopOf="parent" />
         <TextView
             android:id="@+id/sponsor_desc"
             android:layout_width="0dp"

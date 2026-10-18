@@ -29,12 +29,12 @@
         android:singleLine="true"
         android:text="Control Name"
         android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/info_button"
         app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText"
-        android:fontFamily="sans-serif-medium"/>
+        tools:ignore="HardcodedText" />
     <TextView
         android:id="@+id/desc"
         android:layout_width="0dp"

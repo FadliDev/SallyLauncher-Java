@@ -46,10 +46,10 @@
                     android:layout_marginHorizontal="@dimen/_8sdp"
                     android:layout_marginTop="@dimen/_16sdp"
                     android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/title"
-                    android:fontFamily="sans-serif-medium"/>
+                    app:layout_constraintTop_toBottomOf="@id/title" />
                 <TextView
                     android:id="@+id/dec2"
                     android:layout_width="0dp"
@@ -57,10 +57,10 @@
                     android:layout_marginHorizontal="@dimen/_8sdp"
                     android:layout_marginTop="@dimen/_8sdp"
                     android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dec1"
-                    android:fontFamily="sans-serif-medium"/>
+                    app:layout_constraintTop_toBottomOf="@id/dec1" />
                 <TextView
                     android:id="@+id/dec3"
                     android:layout_width="0dp"
@@ -68,10 +68,10 @@
                     android:layout_marginHorizontal="@dimen/_8sdp"
                     android:layout_marginTop="@dimen/_8sdp"
                     android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dec2"
-                    android:fontFamily="sans-serif-medium"/>
+                    app:layout_constraintTop_toBottomOf="@id/dec2" />
                 <com.movtery.zalithlauncher.ui.view.AnimButton
                     android:id="@+id/license_button"
                     android:layout_width="wrap_content"
@@ -134,10 +134,10 @@
                     android:layout_marginTop="@dimen/_8sdp"
                     android:text="@string/about_contributors"
                     android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:fontFamily="sans-serif-medium"/>
+                    app:layout_constraintTop_toTopOf="parent" />
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/about_recycler"
                     android:layout_width="match_parent"

@@ -26,12 +26,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/option_edit_controls"
-                android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
+                android:textStyle="bold"
+                android:textColor="@color/black_or_white"
+                android:text="@string/option_edit_controls" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
-                android:background="@color/md_outline_variant" />
+                android:background="@color/text_background_fill" />
             <com.movtery.zalithlauncher.ui.view.AnimTextView
                 android:id="@+id/add_button"
                 android:layout_width="match_parent"
@@ -69,12 +70,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:text="@string/generic_save"
-                android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
+                android:textStyle="bold"
+                android:textColor="@color/black_or_white"
+                android:text="@string/generic_save" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
-                android:background="@color/md_outline_variant" />
+                android:background="@color/text_background_fill" />
             <com.movtery.zalithlauncher.ui.view.AnimTextView
                 android:id="@+id/load"
                 android:layout_width="match_parent"
@@ -123,12 +125,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:text="@string/pedit_control"
-                android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
+                android:textStyle="bold"
+                android:textColor="@color/black_or_white"
+                android:text="@string/pedit_control" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
-                android:background="@color/md_outline_variant" />
+                android:background="@color/text_background_fill" />
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/snapping_layout"
                 android:layout_width="match_parent"
@@ -146,7 +149,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/snapping"
                     android:text="@string/controls_settings_button_snapping"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <Switch
                     android:id="@+id/snapping"
                     android:layout_width="wrap_content"

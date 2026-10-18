@@ -44,16 +44,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/setting_category_version"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
+                        android:textColor="@color/settings_category"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
                         android:id="@+id/isolation_type_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/setting_version_isolation_title"
-                        app:layout_constraintTop_toBottomOf="@id/version_settings_title"
-                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                        app:layout_constraintTop_toBottomOf="@id/version_settings_title" />
                     <com.skydoves.powerspinner.PowerSpinnerView
                         android:id="@+id/isolation_type"
                         android:layout_width="match_parent"
@@ -61,7 +60,7 @@
                         android:background="@drawable/background_item"
                         android:padding="@dimen/padding_heavy"
                         app:layout_constraintTop_toBottomOf="@id/isolation_type_title"
-                        app:spinner_arrow_tint="@color/md_on_surface"
+                        app:spinner_arrow_tint="@color/primary_text"
                         app:spinner_item_height="@dimen/_40sdp"
                         app:spinner_popup_background="@drawable/md_menu_background"
                         app:spinner_popup_max_height="@dimen/_240sdp"
@@ -73,8 +72,7 @@
                         android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/pedit_control"
                         app:layout_constraintStart_toStartOf="@+id/control_name"
-                        app:layout_constraintTop_toBottomOf="@+id/isolation_type"
-                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                        app:layout_constraintTop_toBottomOf="@+id/isolation_type" />
                     <com.movtery.zalithlauncher.ui.view.AnimTextView
                         android:id="@+id/control_name"
                         android:layout_width="0dp"
@@ -107,8 +105,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/pedit_custom_path"
                             app:layout_constraintStart_toStartOf="@+id/custom_path"
-                            app:layout_constraintTop_toTopOf="parent"
-                            android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                            app:layout_constraintTop_toTopOf="parent" />
                         <com.movtery.zalithlauncher.ui.view.AnimTextView
                             android:id="@+id/custom_path"
                             android:layout_width="0dp"
@@ -138,8 +135,7 @@
                         android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/setting_renderer_title"
                         app:layout_constraintStart_toStartOf="@+id/renderer_spinner"
-                        app:layout_constraintTop_toBottomOf="@+id/custom_path_layout"
-                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                        app:layout_constraintTop_toBottomOf="@+id/custom_path_layout" />
                     <com.skydoves.powerspinner.PowerSpinnerView
                         android:id="@+id/renderer_spinner"
                         android:layout_width="match_parent"
@@ -147,7 +143,7 @@
                         android:background="@drawable/background_item"
                         android:padding="@dimen/padding_heavy"
                         app:layout_constraintTop_toBottomOf="@+id/renderer_title"
-                        app:spinner_arrow_tint="@color/md_on_surface"
+                        app:spinner_arrow_tint="@color/primary_text"
                         app:spinner_item_height="@dimen/_40sdp"
                         app:spinner_popup_background="@drawable/md_menu_background"
                         app:spinner_popup_max_height="@dimen/_240sdp"
@@ -159,8 +155,7 @@
                         android:layout_marginTop="@dimen/_8sdp"
                         android:text="@string/setting_driver_title"
                         app:layout_constraintStart_toStartOf="@+id/driver_spinner"
-                        app:layout_constraintTop_toBottomOf="@+id/renderer_spinner"
-                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                        app:layout_constraintTop_toBottomOf="@+id/renderer_spinner" />
                     <com.skydoves.powerspinner.PowerSpinnerView
                         android:id="@+id/driver_spinner"
                         android:layout_width="match_parent"
@@ -168,7 +163,7 @@
                         android:background="@drawable/background_item"
                         android:padding="@dimen/padding_heavy"
                         app:layout_constraintTop_toBottomOf="@+id/driver_title"
-                        app:spinner_arrow_tint="@color/md_on_surface"
+                        app:spinner_arrow_tint="@color/primary_text"
                         app:spinner_item_height="@dimen/_40sdp"
                         app:spinner_popup_background="@drawable/md_menu_background"
                         app:spinner_popup_max_height="@dimen/_240sdp"
@@ -186,14 +181,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/setting_category_game"
-                        android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
+                        android:textColor="@color/settings_category" />
                     <TextView
                         android:id="@+id/custom_info_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
-                        android:text="@string/setting_version_custom_info_title"
-                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                        android:text="@string/setting_version_custom_info_title" />
                     <TextView
                         android:id="@+id/custom_info_desc"
                         android:layout_width="wrap_content"
@@ -215,8 +209,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
-                        android:text="@string/setting_java_args_title"
-                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                        android:text="@string/setting_java_args_title" />
                     <TextView
                         android:id="@+id/jvm_args_desc"
                         android:layout_width="wrap_content"
@@ -238,15 +231,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
-                        android:text="@string/multirt_config_title"
-                        android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                        android:text="@string/multirt_config_title" />
                     <com.skydoves.powerspinner.PowerSpinnerView
                         android:id="@+id/runtime_spinner"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp"
                         android:background="@drawable/background_item"
                         android:padding="@dimen/padding_heavy"
-                        app:spinner_arrow_tint="@color/md_on_surface"
+                        app:spinner_arrow_tint="@color/primary_text"
                         app:spinner_item_height="@dimen/_40sdp"
                         app:spinner_popup_background="@drawable/md_menu_background"
                         app:spinner_popup_max_height="@dimen/_240sdp"
@@ -266,7 +258,6 @@
         app:layout_constraintTop_toTopOf="parent">
         <View
             android:id="@+id/shadowView"
-            android:visibility="gone"
             android:layout_width="@dimen/_4sdp"
             android:layout_height="match_parent"
             android:background="@drawable/shadow_gradient_right"
@@ -277,10 +268,7 @@
             android:id="@+id/operate_main_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/background_panel"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginBottom="@dimen/_12sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@color/menu_overlay"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/shadowView"
@@ -297,7 +285,7 @@
                     android:id="@+id/icon"
                     android:layout_width="@dimen/_52sdp"
                     android:layout_height="@dimen/_52sdp"
-                    android:background="@drawable/md_icon_button"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
                     android:paddingHorizontal="@dimen/_2sdp"
                     android:paddingVertical="@dimen/_2sdp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -323,30 +311,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/icon_layout" />
             <com.movtery.zalithlauncher.ui.view.AnimButton
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:text="@string/generic_save"
+                app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/cancel_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:text="@android:string/cancel"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/save_button"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="parent" />
-            <com.movtery.zalithlauncher.ui.view.AnimButton
-                android:id="@+id/save_button"
-                style="@style/Widget.Zalith.Button.Filled"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_4sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:layout_marginBottom="@dimen/_8sdp"
-                android:text="@string/generic_save"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/cancel_button" />
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

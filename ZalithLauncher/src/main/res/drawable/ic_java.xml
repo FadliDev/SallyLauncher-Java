@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:width="18.35dp"
     android:height="23.72dp"
-    android:tint="@color/md_on_surface"
+    android:tint="@color/black_or_white"
     android:viewportWidth="18.35"
     android:viewportHeight="23.72">
   <path

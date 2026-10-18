@@ -26,10 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_16sdp"
         android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/refresh"
         app:layout_constraintStart_toEndOf="@+id/icon"
-        app:layout_constraintTop_toTopOf="@+id/icon"
-        android:fontFamily="sans-serif-medium"/>
+        app:layout_constraintTop_toTopOf="@+id/icon" />
     <TextView
         android:id="@+id/login_type"
         android:layout_width="0dp"
@@ -45,12 +45,12 @@
         android:layout_marginHorizontal="@dimen/_8sdp"
         android:text="@string/account_add"
         android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/refresh"
         app:layout_constraintStart_toEndOf="@+id/icon"
-        app:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="sans-serif-medium"/>
+        app:layout_constraintTop_toTopOf="parent" />
     <ImageButton
         android:id="@+id/refresh"
         android:layout_width="@dimen/_28sdp"

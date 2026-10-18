@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_12sdp"
                 android:text="@string/setting_category_video"
-                android:textAppearance="@style/TextAppearance.Zalith.SectionHeader" />
+                android:textColor="@color/settings_category" />
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/renderer_layout"
                 android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/renderer_download"
                     android:text="@string/setting_renderer_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/renderer_value"
                     android:layout_width="0dp"
@@ -73,7 +73,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/renderer_local_import_manage"
                     android:text="@string/setting_renderer_local_import_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/renderer_local_import_summary"
                     android:layout_width="0dp"
@@ -82,8 +82,7 @@
                     android:layout_below="@+id/renderer_local_import_title"
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/renderer_local_import_manage"
-                    android:text="@string/setting_renderer_local_import_desc"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_renderer_local_import_desc" />
                 <ImageButton
                     android:id="@+id/renderer_local_import_manage"
                     android:layout_width="@dimen/_32sdp"
@@ -108,7 +107,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/driver_download"
                     android:text="@string/setting_driver_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/driver_value"
                     android:layout_width="0dp"
@@ -142,7 +141,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/ignoreNotch"
                     android:text="@string/setting_ignore_notch_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/ignoreNotch_summary"
                     android:layout_width="0dp"
@@ -151,8 +150,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/ignoreNotch"
-                    android:text="@string/setting_ignore_notch_desc"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_ignore_notch_desc" />
                 <Switch
                     android:id="@+id/ignoreNotch"
                     android:layout_width="wrap_content"
@@ -176,7 +174,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/ignoreNotchLauncher"
                     android:text="@string/setting_launcher_ignore_notch_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/ignoreNotchLauncher_summary"
                     android:layout_width="0dp"
@@ -185,8 +183,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/ignoreNotchLauncher"
-                    android:text="@string/setting_launcher_ignore_notch_desc"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_launcher_ignore_notch_desc" />
                 <Switch
                     android:id="@+id/ignoreNotchLauncher"
                     android:layout_width="wrap_content"
@@ -210,7 +207,7 @@
                     android:layout_marginHorizontal="@dimen/_12sdp"
                     android:layout_marginTop="@dimen/_12sdp"
                     android:text="@string/setting_resolution_scaler_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/resolutionRatio_summary"
                     android:layout_width="0dp"
@@ -219,8 +216,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"
                     android:layout_marginHorizontal="@dimen/_12sdp"
-                    android:text="@string/setting_resolution_scaler_desc"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_resolution_scaler_desc" />
                 <SeekBar
                     android:id="@+id/resolutionRatio"
                     android:layout_width="wrap_content"
@@ -267,7 +263,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/sustainedPerformance"
                     android:text="@string/setting_sustained_performance_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/sustainedPerformance_summary"
                     android:layout_width="0dp"
@@ -276,8 +272,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/sustainedPerformance"
-                    android:text="@string/setting_limit_overheating_throttling"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_limit_overheating_throttling" />
                 <Switch
                     android:id="@+id/sustainedPerformance"
                     android:layout_width="wrap_content"
@@ -300,7 +295,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/alternate_surface"
                     android:text="@string/setting_use_surface_view_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/alternate_surface_summary"
                     android:layout_width="0dp"
@@ -309,8 +304,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/alternate_surface"
-                    android:text="@string/setting_use_surface_view_desc"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_use_surface_view_desc" />
                 <Switch
                     android:id="@+id/alternate_surface"
                     android:layout_width="wrap_content"
@@ -333,7 +327,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/force_vsync"
                     android:text="@string/setting_force_vsync_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/force_vsync_summary"
                     android:layout_width="0dp"
@@ -342,8 +336,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/force_vsync"
-                    android:text="@string/setting_limit_overheating_throttling"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_limit_overheating_throttling" />
                 <Switch
                     android:id="@+id/force_vsync"
                     android:layout_width="wrap_content"
@@ -366,7 +359,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/vsync_in_zink"
                     android:text="@string/setting_vsync_in_zink_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/vsync_in_zink_summary"
                     android:layout_width="0dp"
@@ -375,8 +368,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/vsync_in_zink"
-                    android:text="@string/setting_vsync_in_zink_desc"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_vsync_in_zink_desc" />
                 <Switch
                     android:id="@+id/vsync_in_zink"
                     android:layout_width="wrap_content"
@@ -399,7 +391,7 @@
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/zinkPreferSystemDriver"
                     android:text="@string/setting_vulkan_driver_system_title"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingTitle" />
+                    android:textColor="@color/black_or_white" />
                 <TextView
                     android:id="@+id/zinkPreferSystemDriver_summary"
                     android:layout_width="0dp"
@@ -408,8 +400,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginEnd="@dimen/_8sdp"
                     android:layout_toStartOf="@+id/zinkPreferSystemDriver"
-                    android:text="@string/setting_vulkan_driver_system_desc"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingSummary" />
+                    android:text="@string/setting_vulkan_driver_system_desc" />
                 <Switch
                     android:id="@+id/zinkPreferSystemDriver"
                     android:layout_width="wrap_content"

@@ -35,7 +35,7 @@
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:scrollbars="vertical"
-                android:scrollbarThumbVertical="@color/md_primary"
+                android:scrollbarThumbVertical="@color/background_menu_element"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
                 android:layout_marginStart="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:text="@string/custom_mouse_title"
-                android:textColor="@color/md_on_surface"
+                android:textColor="@color/primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -63,7 +63,6 @@
         app:layout_constraintTop_toTopOf="parent">
         <View
             android:id="@+id/shadowView"
-            android:visibility="gone"
             android:layout_width="@dimen/_4sdp"
             android:layout_height="match_parent"
             android:background="@drawable/shadow_gradient_right"
@@ -74,10 +73,7 @@
             android:id="@+id/operate_main_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:background="@drawable/background_panel"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginBottom="@dimen/_12sdp"
-            android:layout_marginEnd="@dimen/_12sdp"
+            android:background="@color/menu_overlay"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

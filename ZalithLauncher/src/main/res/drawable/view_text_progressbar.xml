@@ -9,7 +9,7 @@
         <clip>
             <shape android:shape="rectangle">
                 <corners android:radius="100dp" />
-                <solid android:color="@color/md_primary"/>
+                <solid android:color="@color/menu_progress"/>
             </shape>
         </clip>
     </item>

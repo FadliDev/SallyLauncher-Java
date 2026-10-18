@@ -2,8 +2,7 @@
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="@color/md_state_pressed_on_secondary_container">
     <item>
-        <shape android:shape="rectangle">
-            <corners android:radius="14dp" />
+        <shape android:shape="oval">
             <solid android:color="@color/md_secondary_container" />
         </shape>
     </item>

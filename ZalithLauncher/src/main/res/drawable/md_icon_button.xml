@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Sally icon button: rounded square (14dp) instead of a circle -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="@color/md_state_pressed_on_surface">
     <item android:id="@android:id/mask">
-        <shape android:shape="rectangle">
-            <corners android:radius="14dp" />
+        <shape android:shape="oval">
             <solid android:color="#FFFFFFFF" />
         </shape>
     </item>

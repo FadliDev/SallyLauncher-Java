@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- MD3 navigation active indicator: full pill, secondary container. -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:top="2dp" android:bottom="2dp">
-        <shape android:shape="rectangle">
-            <corners android:radius="14dp" />
-            <solid android:color="@color/md_secondary_container" />
+    <item android:gravity="start" android:top="@dimen/_8sdp" android:bottom="@dimen/_8sdp" android:width="@dimen/_3sdp">
+        <shape>
+            <corners android:radius="100dp" />
+            <solid android:color="@color/settings_category"/>
         </shape>
     </item>
 </layer-list>

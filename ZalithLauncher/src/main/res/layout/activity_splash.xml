@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_surface">
+    android:background="@color/background_app">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/title_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_35sdp"
-        android:background="@color/md_surface_container"
+        android:background="@color/background_menu_top"
         app:layout_constraintTop_toTopOf="parent">
         <com.movtery.zalithlauncher.ui.view.AnimTextView
             android:id="@+id/title_text"
@@ -16,12 +16,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_12sdp"
             android:background="?android:attr/selectableItemBackground"
-            android:textColor="@color/md_on_surface"
+            android:textColor="@color/menu_bar_text"
             android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:fontFamily="sans-serif-medium"/>
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                 android:id="@+id/operate_main_layout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="@color/md_surface_container_low"
+                android:background="@color/menu_overlay"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/shadowView2"
