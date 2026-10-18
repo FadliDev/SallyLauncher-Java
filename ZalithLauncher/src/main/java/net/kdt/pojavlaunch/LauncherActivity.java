@@ -628,7 +628,7 @@ public class LauncherActivity extends BaseActivity {
         float r = 28f * getResources().getDisplayMetrics().density;
         GradientDrawable gd = new GradientDrawable();
         gd.setColor(color);
-        gd.setCornerRadii(new float[]{0, 0, r, r, r, r, 0, 0});
+        gd.setCornerRadii(new float[]{r, r, 0, 0, 0, 0, r, r});
         binding.topLayout.setBackground(gd);
     }
 

@@ -44,11 +44,11 @@
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_10sdp">
+                android:paddingHorizontal="@dimen/_8sdp">
                 <ImageView
                     android:id="@+id/video_image"
-                    android:layout_width="@dimen/_22sdp"
-                    android:layout_height="@dimen/_22sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:layout_centerVertical="true"
                     android:background="@android:color/transparent"
                     android:contentDescription="@string/setting_category_video"
@@ -62,16 +62,17 @@
                     android:layout_toEndOf="@+id/video_image"
                     android:singleLine="true"
                     android:text="@string/setting_category_video"
-                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel" />
+                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel"
+                    android:textSize="@dimen/_10ssp" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_10sdp">
+                android:paddingHorizontal="@dimen/_8sdp">
                 <ImageView
                     android:id="@+id/controls_image"
-                    android:layout_width="@dimen/_22sdp"
-                    android:layout_height="@dimen/_22sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:layout_centerVertical="true"
                     android:background="@android:color/transparent"
                     android:contentDescription="@string/setting_category_control"
@@ -85,16 +86,17 @@
                     android:layout_toEndOf="@+id/controls_image"
                     android:singleLine="true"
                     android:text="@string/setting_category_control"
-                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel" />
+                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel"
+                    android:textSize="@dimen/_10ssp" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_10sdp">
+                android:paddingHorizontal="@dimen/_8sdp">
                 <ImageView
                     android:id="@+id/game_image"
-                    android:layout_width="@dimen/_22sdp"
-                    android:layout_height="@dimen/_22sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:layout_centerVertical="true"
                     android:background="@android:color/transparent"
                     android:contentDescription="@string/setting_category_game"
@@ -108,16 +110,17 @@
                     android:layout_toEndOf="@+id/game_image"
                     android:singleLine="true"
                     android:text="@string/setting_category_game"
-                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel" />
+                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel"
+                    android:textSize="@dimen/_10ssp" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_10sdp">
+                android:paddingHorizontal="@dimen/_8sdp">
                 <ImageView
                     android:id="@+id/launcher_image"
-                    android:layout_width="@dimen/_22sdp"
-                    android:layout_height="@dimen/_22sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:layout_centerVertical="true"
                     android:background="@android:color/transparent"
                     android:contentDescription="@string/setting_category_launcher"
@@ -131,16 +134,17 @@
                     android:layout_toEndOf="@+id/launcher_image"
                     android:singleLine="true"
                     android:text="@string/setting_category_launcher"
-                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel" />
+                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel"
+                    android:textSize="@dimen/_10ssp" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingHorizontal="@dimen/_10sdp">
+                android:paddingHorizontal="@dimen/_8sdp">
                 <ImageView
                     android:id="@+id/experimental_image"
-                    android:layout_width="@dimen/_22sdp"
-                    android:layout_height="@dimen/_22sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:layout_centerVertical="true"
                     android:background="@android:color/transparent"
                     android:contentDescription="@string/setting_category_experimental"
@@ -154,7 +158,8 @@
                     android:layout_toEndOf="@+id/experimental_image"
                     android:singleLine="true"
                     android:text="@string/setting_category_experimental"
-                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel" />
+                    android:textAppearance="@style/TextAppearance.Zalith.NavLabel"
+                    android:textSize="@dimen/_10ssp" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         </com.angcyo.tablayout.DslTabLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
