@@ -25,12 +25,9 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
         with:
-          # The packages input is newline-separated, not comma-separated.
-          packages: |
-            platform-tools
-            platforms;android-34
-            build-tools;34.0.0
-            ndk;25.2.9519653
+          # setup-android@v3 splits this input on spaces, not commas or newlines.
+          # Specify packages explicitly to avoid the removed legacy 'tools' package.
+          packages: 'platform-tools platforms;android-34 build-tools;34.0.0 ndk;25.2.9519653'
 
       - name: Build LWJGL runtime JARs
         run: |
