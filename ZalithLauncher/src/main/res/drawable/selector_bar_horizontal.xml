@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- MD3 segmented/tab active indicator: inset so the pill sits inside the strip border instead of spilling over it -->
-<inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:insetLeft="2dp"
-    android:insetTop="4dp"
-    android:insetRight="2dp"
-    android:insetBottom="4dp">
-    <shape android:shape="rectangle">
-        <corners android:radius="20dp" />
-        <solid android:color="@color/md_secondary_container" />
-    </shape>
-</inset>
+<!-- MD3 segmented/tab active indicator -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="14dp" />
+            <solid android:color="@color/md_secondary_container" />
+        </shape>
+    </item>
+</layer-list>
