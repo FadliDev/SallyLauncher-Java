@@ -225,7 +225,7 @@
 
     <style name="Widget.Zalith.SwitchCompat" parent="@style/Widget.AppCompat.CompoundButton.Switch">
         <item name="track">@drawable/md_switch_track</item>
-        <item name="thumb">@drawable/md_switch_thumb</item>
+        <item name="android:thumb">@drawable/md_switch_thumb</item>
         <item name="showText">false</item>
     </style>
 
