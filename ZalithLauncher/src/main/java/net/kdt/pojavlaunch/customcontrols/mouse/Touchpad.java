@@ -105,7 +105,7 @@ public class Touchpad extends View implements GrabListener, AbstractTouchpad {
     public void updateMouseScale() {
         Dimension mousescale = ImageUtils.resizeWithRatio(mMousePointerDrawable.getIntrinsicWidth(), mMousePointerDrawable.getIntrinsicHeight(),
                 AllSettings.getMouseScale().getValue());
-        mMousePointerDrawable.setBounds(0, 0, (int) (mousescale.width * 0.5), (int) (mousescale.height * 0.5));
+        mMousePointerDrawable.setBounds(0, 0, Math.max(8, (int) (mousescale.width * 0.5)), Math.max(12, (int) (mousescale.height * 0.5)));
     }
 
     public void updateMouseDrawable() {

@@ -99,7 +99,9 @@ public final class ZHTools {
 
         // 鼠标：自定义鼠标图片
         if (mouseFile.exists()) {
-            return Drawable.createFromPath(mouseFile.getAbsolutePath());
+            Drawable custom = Drawable.createFromPath(mouseFile.getAbsolutePath());
+            if (custom != null) return custom;
+            return ResourcesCompat.getDrawable(context.getResources(), R.drawable.ic_mouse_pointer, context.getTheme());
         } else {
             return ResourcesCompat.getDrawable(context.getResources(), R.drawable.ic_mouse_pointer, context.getTheme());
         }

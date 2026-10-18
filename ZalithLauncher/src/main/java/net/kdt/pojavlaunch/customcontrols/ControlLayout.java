@@ -33,6 +33,7 @@ import net.kdt.pojavlaunch.customcontrols.buttons.ControlDrawer;
 import net.kdt.pojavlaunch.customcontrols.buttons.ControlInterface;
 import net.kdt.pojavlaunch.customcontrols.buttons.ControlJoystick;
 import net.kdt.pojavlaunch.customcontrols.buttons.ControlSubButton;
+import net.kdt.pojavlaunch.customcontrols.mouse.Touchpad;
 import net.kdt.pojavlaunch.customcontrols.handleview.ActionRow;
 import net.kdt.pojavlaunch.customcontrols.handleview.ControlHandleView;
 import net.kdt.pojavlaunch.customcontrols.handleview.EditControlPopup;
@@ -63,10 +64,28 @@ public class ControlLayout extends FrameLayout {
 
 	public ControlLayout(Context ctx) {
 		super(ctx);
+		setChildrenDrawingOrderEnabled(true);
 	}
 
 	public ControlLayout(Context ctx, AttributeSet attrs) {
 		super(ctx, attrs);
+		setChildrenDrawingOrderEnabled(true);
+	}
+
+	/**
+	 * The virtual mouse pointer lives in this layout too, below every control button.
+	 * Layouts with big / opaque buttons (or buttons added after it) used to hide the pointer,
+	 * so the Touchpad is always drawn last. The Touchpad does not consume touches, so input is unaffected.
+	 */
+	@Override
+	protected int getChildDrawingOrder(int childCount, int drawingPosition) {
+		int touchpad = -1;
+		for (int i = 0; i < childCount; i++) {
+			if (getChildAt(i) instanceof Touchpad) { touchpad = i; break; }
+		}
+		if (touchpad < 0) return drawingPosition;
+		if (drawingPosition == childCount - 1) return touchpad;
+		return drawingPosition >= touchpad ? drawingPosition + 1 : drawingPosition;
 	}
 
 

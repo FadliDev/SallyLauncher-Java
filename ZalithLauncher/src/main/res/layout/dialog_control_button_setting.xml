@@ -27,6 +27,7 @@
             app:layout_constraintTop_toTopOf="parent" />
         <com.movtery.zalithlauncher.ui.view.AnimEditText
             android:id="@+id/editName_editText"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/background_edit_box"
@@ -41,6 +42,8 @@
         <!--  SIZE SECTION -->
         <TextView
             android:id="@+id/editSize_textView"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -50,6 +53,7 @@
             tools:visibility="visible" />
         <com.movtery.zalithlauncher.ui.view.AnimEditText
             android:id="@+id/editSize_editTextX"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="@dimen/_128sdp"
             android:layout_height="wrap_content"
             android:background="@drawable/background_edit_box"
@@ -82,6 +86,8 @@
         <!-- MAPPING SECTION -->
         <TextView
             android:id="@+id/editMapping_textView"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/customctrl_mapping"
@@ -146,6 +152,8 @@
         -->
         <TextView
             android:id="@+id/mapping_1_textview"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:background="@drawable/background_edit_box_unselected"
             style="?android:attr/spinnerItemStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/_30sdp"
@@ -169,6 +177,8 @@
             app:layout_constraintTop_toTopOf="@+id/mapping_1_textview" />
         <TextView
             android:id="@+id/mapping_2_textview"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:background="@drawable/background_edit_box_unselected"
             style="?android:attr/spinnerItemStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/_30sdp"
@@ -182,6 +192,8 @@
             tools:text="HELLO" />
         <TextView
             android:id="@+id/mapping_3_textview"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:background="@drawable/background_edit_box_unselected"
             style="?android:attr/spinnerItemStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/_30sdp"
@@ -205,6 +217,8 @@
             app:layout_constraintTop_toBottomOf="@+id/mapping_1_textview" />
         <TextView
             android:id="@+id/mapping_4_textview"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:background="@drawable/background_edit_box_unselected"
             style="?android:attr/spinnerItemStyle"
             android:layout_width="0dp"
             android:layout_height="@dimen/_30sdp"
@@ -219,9 +233,10 @@
         <!-- ORIENTATION SECTION -->
         <TextView
             android:id="@+id/editOrientation_textView"
+            android:fontFamily="sans-serif-medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:gravity="center"
             android:text="@string/customctrl_orientation"
             app:layout_constraintStart_toStartOf="parent"
@@ -237,6 +252,7 @@
         <!-- TOGGLE SECTION -->
         <Switch
             android:id="@+id/checkboxToggle"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_36sdp"
             android:text="@string/customctrl_toggle"
@@ -247,6 +263,7 @@
         <!-- MOUSE PASS THROUGH SECTION -->
         <Switch
             android:id="@+id/checkboxPassThrough"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_36sdp"
             android:text="@string/customctrl_passthru"
@@ -257,6 +274,7 @@
         <!-- SWIPEABLE BUTTON SECTION -->
         <Switch
             android:id="@+id/checkboxSwipeable"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_36sdp"
             android:text="@string/customctrl_swipeable"
@@ -267,6 +285,7 @@
         <!-- FORWARD LOCK SECTION -->
         <Switch
             android:id="@+id/checkboxForwardLock"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_36sdp"
             android:text="@string/customctrl_forward_lock"
@@ -276,6 +295,7 @@
             style="@style/Widget.Zalith.Switch" />
         <Switch
             android:id="@+id/checkboxAbsoluteFingerTracking"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_36sdp"
             android:text="@string/customctrl_absolute_tracking"
@@ -301,9 +321,10 @@
         <!-- STROKE WIDTH -->
         <TextView
             android:id="@+id/editStrokeWidth_textView"
+            android:fontFamily="sans-serif-medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:gravity="center"
             android:paddingEnd="@dimen/_5sdp"
             android:text="@string/customctrl_stroke_width"
@@ -345,6 +366,8 @@
         <!-- CORNER RADIUS SECTION -->
         <TextView
             android:id="@+id/editCornerRadius_textView"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -371,6 +394,8 @@
         <!-- BUTTON OPACITY SECTION -->
         <TextView
             android:id="@+id/editButtonOpacity_textView"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -397,6 +422,8 @@
         <!-- Button visibility -->
         <TextView
             android:id="@+id/visibility_textview"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/controls_visibility"
@@ -404,6 +431,7 @@
             app:layout_constraintStart_toStartOf="parent" />
         <CheckBox
             android:id="@+id/visibility_game_checkbox"
+            android:layout_marginTop="@dimen/_4sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/controls_in_game"
