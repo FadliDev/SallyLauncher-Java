@@ -1,0 +1,43 @@
+name: Sally Launcher Android ARM64
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-arm64:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build LWJGL runtime JARs
+        run: |
+          chmod +x ./gradlew
+          mkdir -p out
+          ./gradlew jre_lwjgl3glfw:build --no-daemon
+
+      - name: Build Sally Launcher (ARM64)
+        run: ./gradlew ZalithLauncher:assembleDebug -Darch=arm64 --no-daemon
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sally-Launcher-Android-arm64
+          path: ZalithLauncher/build/outputs/apk/debug/*arm64*.apk
+          if-no-files-found: error
+          retention-days: 14

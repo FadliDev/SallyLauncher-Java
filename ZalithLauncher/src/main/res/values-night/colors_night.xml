@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Sally Launcher: Material 3 dark color scheme -->
+    <color name="md_theme_dark_primary">#52DBC9</color>
+    <color name="md_theme_dark_onPrimary">#003731</color>
+    <color name="md_theme_dark_primaryContainer">#005047</color>
+    <color name="md_theme_dark_onPrimaryContainer">#74F8E5</color>
+    <color name="md_theme_dark_secondary">#B1CCC5</color>
+    <color name="md_theme_dark_onSecondary">#1C3531</color>
+    <color name="md_theme_dark_secondaryContainer">#334B47</color>
+    <color name="md_theme_dark_tertiary">#B0CBE5</color>
+    <color name="md_theme_dark_surface">#0E1513</color>
+    <color name="md_theme_dark_onSurface">#DEE4E0</color>
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="black_or_white">#FFFFFF</color>
+    <color name="background_app">#0E1513</color>
+    <color name="background_app_error">#431A1A</color>
+    <color name="background_overlay">#26302D</color>
+    <color name="background_status_bar">#0E1513</color>
+    <color name="background_menu_top">#005047</color>
+    <color name="background_menu_top_error">#93000A</color>
+    <color name="background_menu_element">#52DBC9</color>
+    <color name="background_ripple_effect">#47615B</color>
+    <color name="button_background">#26302D</color>
+    <color name="button_background_selected">#334B47</color>
+    <color name="dialog_background">#1A2220</color>
+    <color name="menu_bar">#1A2220</color>
+    <color name="menu_bar_text">#FFFFFF</color>
+    <color name="menu_overlay">#BE0E1513</color>
+    <color name="menu_progress">#52DBC9</color>
+    <color name="background_item">#BF1A2220</color>
+    <color name="background_item_selected">#D8334B47</color>
+    <color name="background_item_disabled">#D8452828</color>
+    <color name="background_sponsor_intermediate">#80BD6C2D</color>
+    <color name="background_sponsor_advanced">#80B83C1F</color>
+    <color name="edit_box_fill">#26302D</color>
+    <color name="edit_box_fill_selected">#334B47</color>
+    <color name="mod_category_fill">#804C625C</color>
+    <color name="text_background_fill">#B3435550</color>
+    <color name="settings_category">#52DBC9</color>
+    <color name="favorite_color">#FFB4AB</color>
+    <color name="icon_color">#FFFFFF</color>
+    <color name="primary_text">#FFFFFF</color>
+</resources>
