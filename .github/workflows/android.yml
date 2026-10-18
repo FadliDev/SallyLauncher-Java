@@ -35,7 +35,7 @@ jobs:
           key: feathergl-3rdparty-glslang-15.4.0-v1
 
       - name: Fetch glslang + SPIRV-Cross
-        run: ./feathergl/setup_deps.sh
+        run: bash feathergl/setup_deps.sh
 
       - name: Build FeatherGL (libfeathergl.so)
         run: |
