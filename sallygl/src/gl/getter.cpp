@@ -375,13 +375,13 @@ extern "C"
                 if (use_mc_color == 1) {
                     version_builder << " §a"
 #if RELEASE == 1
-                                    << "FeatherGL §b"
+                                    << "SallyGL §b"
 #else
-                                    << "FeatherGL §d"
+                                    << "SallyGL §d"
 #endif
                                     << VERSION_TYPE;
                 } else {
-                    version_builder << " FeatherGL " << VERSION_TYPE;
+                    version_builder << " SallyGL " << VERSION_TYPE;
                 }
 
                 version_builder << MAJOR << "." << MINOR << "." << REVISION << VERSION_SUFFIX;
@@ -399,7 +399,7 @@ extern "C"
             BuildExtensionsList();
             return glstate->extensions;
         case GL_VENDOR:
-            return (GLubyte*)"FeatherGL (gl4es by ptitSeb, NG-GL4ES by BZLZHH)";
+            return (GLubyte*)"SallyGL (gl4es by ptitSeb, NG-GL4ES by BZLZHH)";
         case GL_RENDERER: {
             if (rendererString == std::string("")) {
                 const char* gpuName = getGpuName();
@@ -409,7 +409,7 @@ extern "C"
             return (const GLubyte*)rendererString.c_str();
         }
         case GL_SHADING_LANGUAGE_VERSION:
-            return (GLubyte*)"4.50 FeatherGL with glslang and SPIRV-Cross";
+            return (GLubyte*)"4.50 SallyGL with glslang and SPIRV-Cross";
         case GL_PROGRAM_ERROR_STRING_ARB:
             return (GLubyte*)glstate->glsl->error_msg;
         default:

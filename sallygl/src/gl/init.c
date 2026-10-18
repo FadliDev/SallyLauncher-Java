@@ -117,7 +117,7 @@ void initialize_gl4es() {
     }
 
     clear_log();
-    SHUT_LOGD("Initialising FeatherGL")
+    SHUT_LOGD("Initialising SallyGL")
 
     config_refresh();
 
@@ -435,14 +435,14 @@ void initialize_gl4es() {
 
     if (env_version) {
         snprintf(globals4es.version, 64,
-                 globals4es.use_mc_color == 1 ? "%s §aFeatherGL %s%s%d.%d.%d%s§r"
-                                              : "%s FeatherGL %s%s%d.%d.%d%s",
+                 globals4es.use_mc_color == 1 ? "%s §aSallyGL %s%s%d.%d.%d%s§r"
+                                              : "%s SallyGL %s%s%d.%d.%d%s",
                  env_version, version_color, VERSION_TYPE, MAJOR, MINOR, REVISION, VERSION_SUFFIX);
         SHUT_LOGD("Targeting OpenGL %s", env_version);
     } else {
         snprintf(globals4es.version, 64,
-                 globals4es.use_mc_color == 1 ? "%d.%d §aFeatherGL %s%s%d.%d.%d%s§r"
-                                              : "%d.%d FeatherGL %s%s%d.%d.%d%s",
+                 globals4es.use_mc_color == 1 ? "%d.%d §aSallyGL %s%s%d.%d.%d%s§r"
+                                              : "%d.%d SallyGL %s%s%d.%d.%d%s",
                  globals4es.gl / 10, globals4es.gl % 10, version_color, VERSION_TYPE, MAJOR, MINOR, REVISION,
                  VERSION_SUFFIX);
         SHUT_LOGD("Targeting OpenGL %d.%d", globals4es.gl / 10, globals4es.gl % 10);

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/dialog_min_width"
+    android:orientation="vertical"
+    android:padding="@dimen/_20sdp">
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="sans-serif-medium"
+        tools:text="Sally Auth" />
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:text="@string/sally_auth_username" />
+    <com.movtery.zalithlauncher.ui.view.AnimEditText
+        android:id="@+id/name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:background="@drawable/background_edit_box"
+        android:hint="@string/sally_auth_username_hint"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textVisiblePassword"
+        android:maxLength="16"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:singleLine="true"
+        tools:ignore="LabelFor" />
+    <TextView
+        android:id="@+id/skin_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/sally_auth_skin" />
+    <TextView
+        android:id="@+id/skin_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:alpha="0.7"
+        tools:text="Default skin" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal">
+        <com.movtery.zalithlauncher.ui.view.AnimButton
+            android:id="@+id/choose_skin_button"
+            style="@style/Widget.Zalith.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:text="@string/sally_auth_choose_skin" />
+        <com.movtery.zalithlauncher.ui.view.AnimButton
+            android:id="@+id/reset_skin_button"
+            style="@style/Widget.Zalith.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:text="@string/sally_auth_reset_skin" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView
+        android:id="@+id/cape_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/sally_auth_cape" />
+    <TextView
+        android:id="@+id/cape_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:alpha="0.7"
+        tools:text="No cape" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:orientation="horizontal">
+        <com.movtery.zalithlauncher.ui.view.AnimButton
+            android:id="@+id/choose_cape_button"
+            style="@style/Widget.Zalith.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:text="@string/sally_auth_choose_cape" />
+        <com.movtery.zalithlauncher.ui.view.AnimButton
+            android:id="@+id/remove_cape_button"
+            style="@style/Widget.Zalith.Button.Outlined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:text="@string/sally_auth_remove_cape" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="end"
+        android:orientation="horizontal">
+        <com.movtery.zalithlauncher.ui.view.AnimButton
+            android:id="@+id/cancel_button"
+            style="@style/Widget.Zalith.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:text="@android:string/cancel" />
+        <com.movtery.zalithlauncher.ui.view.AnimButton
+            android:id="@+id/save_button"
+            style="@style/Widget.Zalith.Button.Filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="@string/generic_save" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

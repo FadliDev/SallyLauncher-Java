@@ -75,7 +75,7 @@ class LaunchGame {
                 }
             }
 
-            if (!networkAvailable && !AccountUtils.isFeatherAccount(AccountsManager.currentAccount)) {
+            if (!networkAvailable && !AccountUtils.isSallyAuthAccount(AccountsManager.currentAccount)) {
                 // 网络未链接，无法登录，但是依旧允许玩家启动游戏 (临时创建一个同名的离线账号启动游戏)
                 Toast.makeText(context, context.getString(R.string.account_login_no_network), Toast.LENGTH_SHORT).show()
                 launch(true)

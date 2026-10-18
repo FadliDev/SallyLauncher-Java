@@ -1,0 +1,4 @@
+# append these lines to your repo .gitignore
+sallygl/3rdparty/glslang/
+sallygl/3rdparty/SPIRV-Cross/
+sallygl/build/

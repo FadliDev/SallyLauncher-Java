@@ -56,10 +56,11 @@ class AccountUtils {
             return !Objects.isNull(account.otherBaseUrl) && account.otherBaseUrl != "0"
         }
 
-        /** FeatherAuth = on-device auth server, no network login needed. */
+        /** Sally Auth = on-device auth server, no network login needed. */
         @JvmStatic
-        fun isFeatherAccount(account: MinecraftAccount?): Boolean {
-            return account != null && account.accountType == AccountType.FEATHER.type
+        fun isSallyAuthAccount(account: MinecraftAccount?): Boolean {
+            val type = account?.accountType ?: return false
+            return type == AccountType.SALLY_AUTH.type || type == AccountType.LEGACY_SALLY_AUTH
         }
 
         @JvmStatic
@@ -69,13 +70,15 @@ class AccountUtils {
 
         @JvmStatic
         fun isNoLoginRequired(account: MinecraftAccount?): Boolean {
-            return account == null || account.accountType == AccountType.LOCAL.type || isFeatherAccount(account)
+            return account == null || account.accountType == AccountType.LOCAL.type || isSallyAuthAccount(account)
         }
 
         @JvmStatic
         fun getAccountTypeName(context: Context, account: MinecraftAccount): String {
             return if (isMicrosoftAccount(account)) {
                 context.getString(R.string.account_microsoft_account)
+            } else if (isSallyAuthAccount(account)) {
+                AccountType.SALLY_AUTH.type
             } else if (isOtherLoginAccount(account)) {
                 account.accountType
             } else {

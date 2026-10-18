@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.18)
-project(feathergl C CXX)
+project(sallygl C CXX)
 
 # ---------------------------------------------------------------
-# FeatherGL: slimmed Android-only fork of NG-GL4ES (Krypton Wrapper)
+# SallyGL: slimmed Android-only fork of NG-GL4ES (Krypton Wrapper)
 # Goal: small .so, low call overhead, GL 2.1 compat (MC 1.16) up to
 # GL 3.2 core (MC 1.17 .. 26.x) via GLES 3.x.
 # ---------------------------------------------------------------
@@ -17,10 +17,10 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-# ---- third-party: glslang + SPIRV-Cross (fetched by feathergl/setup_deps.sh)
+# ---- third-party: glslang + SPIRV-Cross (fetched by sallygl/setup_deps.sh)
 if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/glslang/CMakeLists.txt" OR
    NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/SPIRV-Cross/CMakeLists.txt")
-    message(FATAL_ERROR "3rdparty/glslang or 3rdparty/SPIRV-Cross missing. Run feathergl/setup_deps.sh first.")
+    message(FATAL_ERROR "3rdparty/glslang or 3rdparty/SPIRV-Cross missing. Run sallygl/setup_deps.sh first.")
 endif()
 
 set(ENABLE_RTTI                ON  CACHE BOOL "" FORCE)
@@ -131,19 +131,19 @@ set(CPP_SRC_FILES
     src/gl/wrap/glesnative.cpp
 )
 
-add_library(feathergl SHARED ${C_SRC_FILES} ${CPP_SRC_FILES})
+add_library(sallygl SHARED ${C_SRC_FILES} ${CPP_SRC_FILES})
 
-target_include_directories(feathergl PRIVATE
+target_include_directories(sallygl PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${CMAKE_CURRENT_SOURCE_DIR}/src/gl
     ${CMAKE_CURRENT_SOURCE_DIR}/src/glx
 )
 
-target_compile_definitions(feathergl PRIVATE NO_GBM DEFAULT_ES=3 NOX11 ANDROID)
+target_compile_definitions(sallygl PRIVATE NO_GBM DEFAULT_ES=3 NOX11 ANDROID)
 
 # Per-target only: do NOT put -fno-exceptions in global flags (SPIRV-Cross C API needs try/catch).
-target_compile_options(feathergl PRIVATE
+target_compile_options(sallygl PRIVATE
     -fvisibility=hidden
     -ffunction-sections -fdata-sections
     -fno-semantic-interposition
@@ -153,8 +153,8 @@ target_compile_options(feathergl PRIVATE
 )
 
 # Thin LTO: most of the win of full LTO, much lower link RAM (matters on-device/Termux).
-target_compile_options(feathergl PRIVATE -flto=thin)
-target_link_options(feathergl PRIVATE
+target_compile_options(sallygl PRIVATE -flto=thin)
+target_link_options(sallygl PRIVATE
     -flto=thin
     -Wl,--gc-sections
     -Wl,--icf=safe
@@ -163,4 +163,4 @@ target_link_options(feathergl PRIVATE
     -Wl,--strip-all
 )
 
-target_link_libraries(feathergl PRIVATE glslang SPIRV spirv-cross-c android log)
+target_link_libraries(sallygl PRIVATE glslang SPIRV spirv-cross-c android log)

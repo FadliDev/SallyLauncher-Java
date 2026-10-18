@@ -693,4 +693,27 @@
     <!-- Sponsorship Related -->
     <string name="request_sponsorship_title">Support My Development</string>
     <string name="request_sponsorship_message">Most of the content in this software is developed and maintained by me alone. If you find this software helpful and are in a position to do so, I hope you will consider sponsoring me to give me more motivation to continue developing and improving it. Thank you for your support!</string>
+
+    <!-- Sally Auth (on-device skin / cape account) -->
+    <string name="sally_auth">Sally Auth</string>
+    <string name="sally_auth_change_skin">Change Skin</string>
+    <string name="sally_auth_new_title">New Sally Auth account</string>
+    <string name="sally_auth_edit_title">Change skin: %1$s</string>
+    <string name="sally_auth_username">Username</string>
+    <string name="sally_auth_username_hint">3-16 characters: A-Z a-z 0-9 _</string>
+    <string name="sally_auth_skin">Skin</string>
+    <string name="sally_auth_cape">Cape</string>
+    <string name="sally_auth_skin_default">Default skin</string>
+    <string name="sally_auth_skin_classic">Custom skin · Classic (Steve) model detected</string>
+    <string name="sally_auth_skin_slim">Custom skin · Slim (Alex) model detected</string>
+    <string name="sally_auth_cape_none">No cape</string>
+    <string name="sally_auth_cape_set">Custom cape</string>
+    <string name="sally_auth_choose_skin">Choose skin PNG</string>
+    <string name="sally_auth_reset_skin">Default skin</string>
+    <string name="sally_auth_choose_cape">Choose cape PNG</string>
+    <string name="sally_auth_remove_cape">Remove cape</string>
+    <string name="sally_auth_invalid_name">Invalid username</string>
+    <string name="sally_auth_name_exists">That username already exists</string>
+    <string name="sally_auth_select_first">Select a Sally Auth account first</string>
+    <string name="sally_auth_file_error">Failed to read file</string>
 </resources>

@@ -135,17 +135,36 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/shadowView">
-            <com.movtery.zalithlauncher.ui.view.AnimButton
-                android:id="@+id/feather_account_button"
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/sally_auth_buttons"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
-                android:text="Local skin account"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@id/return_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints,HardcodedText" />
+                app:layout_constraintStart_toStartOf="parent">
+                <com.movtery.zalithlauncher.ui.view.AnimButton
+                    android:id="@+id/add_sally_auth_button"
+                    style="@style/Widget.Zalith.Button.Filled"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:singleLine="true"
+                    android:text="@string/sally_auth" />
+                <com.movtery.zalithlauncher.ui.view.AnimButton
+                    android:id="@+id/change_skin_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:singleLine="true"
+                    android:text="@string/sally_auth_change_skin" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/return_button"
                 android:layout_width="0dp"
@@ -153,7 +172,6 @@
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginBottom="@dimen/_8sdp"
                 android:text="@string/generic_return"
-                android:textAllCaps="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -163,7 +181,7 @@
                 layout="@layout/view_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@id/feather_account_button"
+                app:layout_constraintBottom_toTopOf="@id/sally_auth_buttons"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

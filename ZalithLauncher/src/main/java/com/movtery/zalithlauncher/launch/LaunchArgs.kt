@@ -51,7 +51,7 @@ class LaunchArgs(
         val argsList: MutableList<String> = ArrayList()
 
         if (AccountUtils.isOtherLoginAccount(account)) {
-            if (AccountUtils.isFeatherAccount(account)) {
+            if (AccountUtils.isSallyAuthAccount(account)) {
                 // on-device auth server must be listening before the JVM (and authlib-injector) starts
                 com.movtery.zalithlauncher.feature.localauth.LocalAuthServer.ensureStarted()
             }

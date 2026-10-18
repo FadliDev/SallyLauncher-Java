@@ -1,6 +1,7 @@
 package com.movtery.zalithlauncher.feature.localauth
 
 import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.util.Base64
 import com.movtery.zalithlauncher.utils.path.PathManager
 import org.json.JSONObject
@@ -11,9 +12,10 @@ import java.security.MessageDigest
 import java.security.Signature
 import java.security.spec.PKCS8EncodedKeySpec
 import java.util.UUID
+import java.util.concurrent.ConcurrentHashMap
 
 /**
- * On-device storage for FeatherAuth: profiles, textures and the RSA signing key.
+ * On-device storage for SallyAuth: profiles, textures and the RSA signing key.
  * Everything lives in <filesDir>/local_auth and never leaves the device.
  * Shared between the :launcher process (UI writes) and the :game process (server reads) through plain files.
  */
@@ -110,6 +112,58 @@ object LocalAuthStore {
             Unit
         }
         return hash
+    }
+
+    // ---------------------------------------------------------------- skin model detection
+
+    private val modelCache = ConcurrentHashMap<String, String>() // texture hash -> "slim" | "default"
+
+    /**
+     * Detects the arm model of a skin PNG: "slim" (Alex, 3px arms) or "default" (Steve/classic, 4px arms).
+     * A slim skin leaves the unused strip of the right arm texture fully transparent:
+     * x 50..51 / y 16..19 and x 54..55 / y 20..31 on a 64x64 skin (scaled for HD skins).
+     * Legacy 64x32 skins only exist in the classic model.
+     */
+    fun detectModel(bytes: ByteArray): String {
+        val bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.size) ?: return "default"
+        try {
+            val w = bmp.width
+            val h = bmp.height
+            if (w < 64 || w % 64 != 0 || h != w) return "default"
+            val s = w / 64
+            fun transparent(x0: Int, y0: Int, x1: Int, y1: Int): Boolean {
+                for (y in y0 * s until (y1 + 1) * s) {
+                    for (x in x0 * s until (x1 + 1) * s) {
+                        if (Color.alpha(bmp.getPixel(x, y)) != 0) return false
+                    }
+                }
+                return true
+            }
+            val right = transparent(50, 16, 51, 19) && transparent(54, 20, 55, 31)
+            return if (right) "slim" else "default"
+        } finally {
+            bmp.recycle()
+        }
+    }
+
+    /** The model to advertise for a profile: detected from its skin file, or the stored one if there is no skin. */
+    fun effectiveModel(p: Profile): String {
+        val hash = p.skin ?: return p.model
+        modelCache[hash]?.let { return it }
+        val file = textureFile(hash) ?: return p.model
+        val model = try { detectModel(file.readBytes()) } catch (e: Exception) { return p.model }
+        modelCache[hash] = model
+        return model
+    }
+
+    class ImportedSkin(val hash: String, val model: String)
+
+    /** Imports a skin PNG and auto-detects whether it is slim or classic. */
+    fun importSkin(bytes: ByteArray): ImportedSkin {
+        val hash = importTexture(bytes, cape = false)
+        val model = detectModel(bytes)
+        modelCache[hash] = model
+        return ImportedSkin(hash, model)
     }
 
     // ---------------------------------------------------------------- signing key

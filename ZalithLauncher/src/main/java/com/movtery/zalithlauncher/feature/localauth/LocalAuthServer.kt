@@ -26,13 +26,13 @@ import java.util.concurrent.Executors
 object LocalAuthServer {
     const val PORT = 25585
     const val BASE_URL = "http://127.0.0.1:$PORT"
-    private const val TAG = "FeatherAuth"
+    private const val TAG = "SallyAuth"
     private const val MAX_BODY = 1_000_000
 
     @Volatile private var server: ServerSocket? = null
     private val joined = ConcurrentHashMap<String, String>() // serverId -> profileId
     private val pool: ExecutorService = Executors.newCachedThreadPool { r ->
-        Thread(r, "FeatherAuth-worker").apply { isDaemon = true }
+        Thread(r, "SallyAuth-worker").apply { isDaemon = true }
     }
 
     private class Req(val method: String, val path: String, val query: Map<String, String>, val body: ByteArray)
@@ -47,7 +47,7 @@ object LocalAuthServer {
             s.reuseAddress = true
             s.bind(InetSocketAddress(InetAddress.getByName("127.0.0.1"), PORT), 50)
             server = s
-            Thread({ acceptLoop(s) }, "FeatherAuth-accept").apply { isDaemon = true; start() }
+            Thread({ acceptLoop(s) }, "SallyAuth-accept").apply { isDaemon = true; start() }
             Logging.i(TAG, "Local auth server listening on $BASE_URL")
         } catch (e: Exception) {
             Logging.e(TAG, "Could not start local auth server", e)
@@ -184,8 +184,8 @@ object LocalAuthServer {
 
     private fun metadata(): Resp = json(200, JSONObject()
         .put("meta", JSONObject()
-            .put("serverName", "FeatherAuth (local)")
-            .put("implementationName", "feather-local-auth")
+            .put("serverName", "SallyAuth (local)")
+            .put("implementationName", "sally-local-auth")
             .put("implementationVersion", "0.1.0")
             .put("feature.non_email_login", true))
         .put("skinDomains", JSONArray().put("127.0.0.1").put("localhost"))
@@ -264,7 +264,7 @@ object LocalAuthServer {
         val textures = JSONObject()
         p.skin?.let { h ->
             val skin = JSONObject().put("url", "$BASE_URL/textures/$h.png")
-            if (p.model == "slim") skin.put("metadata", JSONObject().put("model", "slim"))
+            if (LocalAuthStore.effectiveModel(p) == "slim") skin.put("metadata", JSONObject().put("model", "slim"))
             textures.put("SKIN", skin)
         }
         p.cape?.let { h -> textures.put("CAPE", JSONObject().put("url", "$BASE_URL/textures/$h.png")) }
