@@ -16,8 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_card"
-            android:divider="@drawable/divider_setting"
-            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -32,7 +30,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/disableGestures_title"
@@ -66,7 +63,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/disableDoubleTap_title"
@@ -99,8 +95,7 @@
                 android:id="@+id/timeLongPressTrigger_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp">
+                android:background="?android:attr/selectableItemBackground">
                 <TextView
                     android:id="@+id/timeLongPressTrigger_title"
                     android:layout_width="wrap_content"
@@ -140,8 +135,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
+                    tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -150,8 +144,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
             android:background="@drawable/background_card"
-            android:divider="@drawable/divider_setting"
-            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -165,8 +157,7 @@
                 android:id="@+id/buttonscale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp">
+                android:background="?android:attr/selectableItemBackground">
                 <TextView
                     android:id="@+id/buttonscale_title"
                     android:layout_width="wrap_content"
@@ -206,15 +197,13 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
+                    tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/buttonAllCaps_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/buttonAllCaps_title"
@@ -250,8 +239,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
             android:background="@drawable/background_card"
-            android:divider="@drawable/divider_setting"
-            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -265,8 +252,7 @@
                 android:id="@+id/mousescale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp">
+                android:background="?android:attr/selectableItemBackground">
                 <TextView
                     android:id="@+id/mousescale_title"
                     android:layout_width="wrap_content"
@@ -306,15 +292,13 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
+                    tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/mousespeed_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp">
+                android:background="?android:attr/selectableItemBackground">
                 <TextView
                     android:id="@+id/mousespeed_title"
                     android:layout_width="wrap_content"
@@ -354,15 +338,13 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
+                    tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/mouse_start_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/mouse_start_title"
@@ -394,7 +376,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/custom_mouse_title"
@@ -421,8 +402,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
             android:background="@drawable/background_card"
-            android:divider="@drawable/divider_setting"
-            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -437,7 +416,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/enableGyro_title"
@@ -470,8 +448,7 @@
                 android:id="@+id/gyroSensitivity_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp">
+                android:background="?android:attr/selectableItemBackground">
                 <TextView
                     android:id="@+id/gyroSensitivity_title"
                     android:layout_width="wrap_content"
@@ -511,15 +488,13 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
+                    tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/gyroSampleRate_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp">
+                android:background="?android:attr/selectableItemBackground">
                 <TextView
                     android:id="@+id/gyroSampleRate_title"
                     android:layout_width="wrap_content"
@@ -559,15 +534,13 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
+                    tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
             <com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout
                 android:id="@+id/gyroSmoothing_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/gyroSmoothing_title"
@@ -602,7 +575,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/gyroInvertX_title"
@@ -636,7 +608,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/gyroInvertY_title"
@@ -672,8 +643,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
             android:background="@drawable/background_card"
-            android:divider="@drawable/divider_setting"
-            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -688,7 +657,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/changeControllerBindings_title"
@@ -713,7 +681,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/resetControllerBindings_title"
@@ -737,8 +704,7 @@
                 android:id="@+id/gamepad_deadzone_scale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp">
+                android:background="?android:attr/selectableItemBackground">
                 <TextView
                     android:id="@+id/gamepad_deadzone_scale_title"
                     android:layout_width="wrap_content"
@@ -778,8 +744,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
+                    tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>

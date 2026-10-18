@@ -16,8 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_card"
-            android:divider="@drawable/divider_setting"
-            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -32,7 +30,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/dump_shaders_title"
@@ -66,7 +63,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp"
                 android:padding="@dimen/_12sdp">
                 <TextView
                     android:id="@+id/bigCoreAffinity_title"
@@ -102,8 +98,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_12sdp"
             android:background="@drawable/background_card"
-            android:divider="@drawable/divider_setting"
-            android:showDividers="middle"
             android:orientation="vertical"
             android:paddingHorizontal="@dimen/_2sdp"
             android:paddingVertical="@dimen/_12sdp">
@@ -117,8 +111,7 @@
                 android:id="@+id/tcVibrateDuration_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground"
-                android:minHeight="@dimen/_44sdp">
+                android:background="?android:attr/selectableItemBackground">
                 <TextView
                     android:id="@+id/tcVibrateDuration_title"
                     android:layout_width="wrap_content"
@@ -158,8 +151,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginVertical="@dimen/_8sdp"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    tools:text="0"
-                    android:textAppearance="@style/TextAppearance.Zalith.SettingValue" />
+                    tools:text="0" />
             </com.movtery.zalithlauncher.ui.layout.AnimRelativeLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
