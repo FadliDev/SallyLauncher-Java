@@ -375,13 +375,13 @@ extern "C"
                 if (use_mc_color == 1) {
                     version_builder << " §a"
 #if RELEASE == 1
-                                    << "Krypton Wrapper §b"
+                                    << "FeatherGL §b"
 #else
-                                    << "Krypton Wrapper §d"
+                                    << "FeatherGL §d"
 #endif
                                     << VERSION_TYPE;
                 } else {
-                    version_builder << " Krypton Wrapper " << VERSION_TYPE;
+                    version_builder << " FeatherGL " << VERSION_TYPE;
                 }
 
                 version_builder << MAJOR << "." << MINOR << "." << REVISION << VERSION_SUFFIX;
@@ -399,7 +399,7 @@ extern "C"
             BuildExtensionsList();
             return glstate->extensions;
         case GL_VENDOR:
-            return (GLubyte*)"ptitSeb & BZLZHH";
+            return (GLubyte*)"FeatherGL (gl4es by ptitSeb, NG-GL4ES by BZLZHH)";
         case GL_RENDERER: {
             if (rendererString == std::string("")) {
                 const char* gpuName = getGpuName();
@@ -409,7 +409,7 @@ extern "C"
             return (const GLubyte*)rendererString.c_str();
         }
         case GL_SHADING_LANGUAGE_VERSION:
-            return (GLubyte*)"4.50 Krypton Wrapper with glslang and SPIRV-Cross";
+            return (GLubyte*)"4.50 FeatherGL with glslang and SPIRV-Cross";
         case GL_PROGRAM_ERROR_STRING_ARB:
             return (GLubyte*)glstate->glsl->error_msg;
         default:

@@ -75,6 +75,7 @@ class AccountFragment : FragmentWithAnim(R.layout.fragment_account), View.OnClic
     }
 
     private lateinit var binding: FragmentAccountBinding
+    private val featherUi = com.movtery.zalithlauncher.feature.localauth.FeatherAccountUi(this)
     private lateinit var mAccountViewWrapper: AccountViewWrapper
     private val mAccountsData: MutableList<MinecraftAccount> = AccountsManager.allAccounts.toMutableList()
     private val mAccountAdapter = AccountAdapter(mAccountsData)
@@ -223,6 +224,7 @@ class AccountFragment : FragmentWithAnim(R.layout.fragment_account), View.OnClic
 
             addServer.setOnClickListener(this@AccountFragment)
             returnButton.setOnClickListener(this@AccountFragment)
+            featherAccountButton.setOnClickListener { featherUi.showMenu() }
         }
 
         reloadAccounts()

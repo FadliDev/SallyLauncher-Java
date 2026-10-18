@@ -56,6 +56,12 @@ class AccountUtils {
             return !Objects.isNull(account.otherBaseUrl) && account.otherBaseUrl != "0"
         }
 
+        /** FeatherAuth = on-device auth server, no network login needed. */
+        @JvmStatic
+        fun isFeatherAccount(account: MinecraftAccount?): Boolean {
+            return account != null && account.accountType == AccountType.FEATHER.type
+        }
+
         @JvmStatic
         fun isMicrosoftAccount(account: MinecraftAccount): Boolean {
             return account.accountType == AccountType.MICROSOFT.type
@@ -63,7 +69,7 @@ class AccountUtils {
 
         @JvmStatic
         fun isNoLoginRequired(account: MinecraftAccount?): Boolean {
-            return account == null || account.accountType == AccountType.LOCAL.type
+            return account == null || account.accountType == AccountType.LOCAL.type || isFeatherAccount(account)
         }
 
         @JvmStatic

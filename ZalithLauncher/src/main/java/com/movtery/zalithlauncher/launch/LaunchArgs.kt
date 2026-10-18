@@ -51,6 +51,10 @@ class LaunchArgs(
         val argsList: MutableList<String> = ArrayList()
 
         if (AccountUtils.isOtherLoginAccount(account)) {
+            if (AccountUtils.isFeatherAccount(account)) {
+                // on-device auth server must be listening before the JVM (and authlib-injector) starts
+                com.movtery.zalithlauncher.feature.localauth.LocalAuthServer.ensureStarted()
+            }
             if (account.otherBaseUrl.contains("auth.mc-user.com")) {
                 argsList.add("-javaagent:${LibPath.NIDE_8_AUTH.absolutePath}=${account.otherBaseUrl.replace("https://auth.mc-user.com:233/", "")}")
                 argsList.add("-Dnide8auth.client=true")
